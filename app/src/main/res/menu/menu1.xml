@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/license"
+        android:title="Licenses"
+        android:icon="@drawable/abc_ic_menu_selectall_mtrl_alpha"
+        android:orderInCategory="2"
+        app:showAsAction="never"></item>
+
+</menu>

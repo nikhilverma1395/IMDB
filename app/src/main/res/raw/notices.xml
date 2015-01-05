@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<notices>
+    <notice>
+        <name>MaterialEditText</name>
+        <url>https://github.com/rengwuxian/MaterialEditText/wiki</url>
+        <copyright>Copyright 2014 ( 扔物线 )rengwuxian</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>LicensesDialog</name>
+        <url>http://psdev.de/LicensesDialog</url>
+        <copyright>Copyright 2013 Philip Schiffer</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>MaterialDesignLibrary</name>
+        <url>https://github.com/navasmdc/MaterialDesignLibrary</url>
+        <copyright>Copyright 2014 Ivan Navas</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>Picasso</name>
+        <url>http://square.github.io/picasso/</url>
+        <copyright>Copyright 2013 Square, Inc.</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+</notices>

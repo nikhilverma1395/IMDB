@@ -1,0 +1,48 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme1" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/primary_dark_red</item>
+        <item name="colorPrimaryDark">@color/accent_red</item>
+        <item name="colorAccent">@color/primary_red</item>
+        <item name="android:statusBarColor">#FFC400</item>
+        <item name="android:navigationBarColor">#FFC400</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowEnterTransition">@android:transition/explode</item>
+        <item name="android:windowExitTransition">@android:transition/explode</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/change_image_transform
+        </item>
+        <item name="android:windowSharedElementExitTransition">@transition/change_image_transform
+        </item>
+
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/primary_dark_red</item>
+        <item name="colorPrimaryDark">@color/accent_red</item>
+        <item name="colorAccent">@color/primary_red</item>
+        <item name="android:statusBarColor">#607D8B</item>
+        <item name="android:navigationBarColor">#607D8B</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowEnterTransition">@android:transition/explode</item>
+        <item name="android:windowExitTransition">@android:transition/explode</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/change_image_transform
+        </item>
+        <item name="android:windowSharedElementExitTransition">@transition/change_image_transform
+        </item>
+    </style>
+
+    <style name="AppTheme3" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/primary_dark_red</item>
+        <item name="colorPrimaryDark">@color/accent_red</item>
+        <item name="colorAccent">@color/primary_red</item>
+        <item name="android:statusBarColor">#1A237E</item>
+        <item name="android:navigationBarColor">#1A237E</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowEnterTransition">@android:transition/explode</item>
+        <item name="android:windowExitTransition">@android:transition/explode</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/change_image_transform
+        </item>
+        <item name="android:windowSharedElementExitTransition">@transition/change_image_transform
+        </item>
+    </style>
+</resources>

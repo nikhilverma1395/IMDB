@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/IMDB.iml" filepath="$PROJECT_DIR$/IMDB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Subsampling_IV/Subsampling_IV.iml" filepath="$PROJECT_DIR$/Subsampling_IV/Subsampling_IV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/act/act.iml" filepath="$PROJECT_DIR$/act/act.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/grid/grid.iml" filepath="$PROJECT_DIR$/grid/grid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/materialDesign/materialDesign.iml" filepath="$PROJECT_DIR$/materialDesign/materialDesign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/material_edit_text/material_edit_text.iml" filepath="$PROJECT_DIR$/material_edit_text/material_edit_text.iml" />
+    </modules>
+  </component>
+</project>
+

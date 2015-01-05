@@ -1,0 +1,26 @@
+<resources>
+
+    <style name="AppTheme1" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/primary_dark_red</item>
+        <item name="colorPrimaryDark">@color/accent_red</item>
+        <item name="colorAccent">@color/primary_red</item>
+
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/primary_dark_red</item>
+        <item name="colorPrimaryDark">@color/accent_red</item>
+        <item name="colorAccent">@color/primary_red</item>
+
+    </style>
+
+    <style name="AppTheme3" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/primary_dark_red</item>
+        <item name="colorPrimaryDark">@color/accent_red</item>
+        <item name="colorAccent">@color/primary_red</item>
+    </style>
+
+    <style name="custom_theme" parent="Theme.AppCompat.Dialog">
+        <item name="android:textColor">#FF00DFFF</item>
+    </style>
+</resources>
