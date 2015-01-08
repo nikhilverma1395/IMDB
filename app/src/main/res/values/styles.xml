@@ -3,7 +3,22 @@
     <style name="AppTheme1" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/primary_dark_red</item>
         <item name="colorPrimaryDark">@color/accent_red</item>
+        <item name="android:windowNoTitle">true</item>
         <item name="colorAccent">@color/primary_red</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+
+    </style>
+
+    <style name="dialognikhil">
+        <item name="colorPrimary">@color/primary_dark_red</item>
+        <item name="colorPrimaryDark">@color/accent_red</item>
+        <item name="colorAccent">@color/primary_red</item>
+        <item name="android:background">#bf8da76c</item>
+        <item name="android:dialogMessage">#424242</item>
+        <item name="android:dialogTitle">#283593</item>
+
 
     </style>
 
@@ -18,6 +33,9 @@
         <item name="colorPrimary">@color/primary_dark_red</item>
         <item name="colorPrimaryDark">@color/accent_red</item>
         <item name="colorAccent">@color/primary_red</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
     </style>
 
     <style name="custom_theme" parent="Theme.AppCompat.Dialog">

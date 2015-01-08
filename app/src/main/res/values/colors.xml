@@ -4,6 +4,12 @@
     <color name="primary_dark">#303F9F</color>
     <color name="accent">#FF4081</color>
     <color name="prim_accent_muted">#FF80AB</color>
+    <color name="genre">#666666</color>
+    <color name="year">#888888</color>
+    <color name="list_row_start_color">#ffffff</color>
+    <color name="list_row_end_color">#ffffff</color>
+    <color name="list_row_hover_start_color">#ebeef0</color>
+    <color name="list_row_hover_end_color">#ebeef0</color>
 
     <color name="primary_red">#F44336</color>
     <color name="primary_dark_red">#D32F2F</color>
