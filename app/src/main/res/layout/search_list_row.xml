@@ -1,65 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:orientation="vertical"
     android:layout_width="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
     android:layout_height="wrap_content"
-    android:background="#CCFF90"
-    android:orientation="horizontal"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_margin="5dp"
-        android:background="#9E9E9E"
-        android:scaleType="fitXY"
-        android:id="@+id/search_list_image"
-        android:layout_height="120dp" />
-
-    <RelativeLayout
-        android:layout_margin="4dp"
+    <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:background="#E0E0E0"
-        android:layout_height="120dp">
+        android:background="@drawable/card_background_selector"
+        android:layout_height="wrap_content"
+        android:id="@+id/lllistback"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:descendantFocusability="beforeDescendants">
 
-        <TextView
-            android:textColor="@color/genre"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:text="ber"
-            android:gravity="left"
-            android:textSize="22sp"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/title"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
 
-        <TextView
-            android:text="9.7"
-            android:gravity="left"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/rating"
-            android:layout_margin="9dp"
-            android:textColor="@color/year"
-            android:textSize="18sp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:descendantFocusability="afterDescendants">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:id="@+id/year_search"
-            android:gravity="right"
-            android:text="year"
-            android:textColor="#009688"
-            android:textSize="18sp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="9dp"
-            android:layout_marginBottom="9dp"
-            android:layout_alignTop="@+id/rating"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-    </RelativeLayout>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_margin="5dp"
+                android:background="#9E9E9E"
+                android:scaleType="fitXY"
+                android:id="@+id/search_list_image"
+                android:layout_height="120dp" />
 
+            <RelativeLayout
+                android:layout_margin="4dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="120dp">
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:gravity="left"
+                    android:fontFamily="it"
+                    android:textSize="22sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/title"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:gravity="left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rating"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="italic"
+                    android:textSize="18sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/year_search"
+                    android:gravity="right"
+                    android:layout_marginTop="6dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18sp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="bottom"
+        android:id="@+id/bottomline"
+        android:background="@color/primary"
+        android:orientation="horizontal"
+        android:layout_height="8dp" />
 
 </LinearLayout>

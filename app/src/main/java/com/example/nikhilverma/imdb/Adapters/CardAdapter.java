@@ -10,6 +10,7 @@
 
                     import com.example.nikhilverma.imdb.Models.ActorDetailModel;
                     import com.example.nikhilverma.imdb.R;
+                    import com.example.nikhilverma.imdb.Views.RoundedTransformation;
                     import com.squareup.picasso.Picasso;
 
                     import java.util.List;

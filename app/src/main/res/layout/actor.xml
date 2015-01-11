@@ -24,7 +24,7 @@
                 android:background="@drawable/image_bef"
                 android:layout_margin="2dp"
                 android:layout_width="match_parent"
-                android:layout_height="240dp"
+                android:layout_height="270dp"
                 android:scaleType="fitXY" />
 
             <LinearLayout

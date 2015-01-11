@@ -8,9 +8,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +18,8 @@ import com.example.nikhilverma.imdb.Adapters.ListAdapter;
 import com.example.nikhilverma.imdb.Models.List_Model;
 import com.example.nikhilverma.imdb.Models.SqliteModel;
 import com.example.nikhilverma.imdb.R;
+import com.example.nikhilverma.imdb.Views.BounceListView;
+import com.example.nikhilverma.imdb.Views.swipeDetector;
 import com.example.nikhilverma.imdb.sqlite.DataSource;
 import com.gc.materialdesign.views.ProgressBarCircularIndetermininate;
 
@@ -28,9 +30,11 @@ import java.util.List;
  * Created by Nikhil Verma on 07-01-2015.
  */
 public class Search extends ActionBarActivity implements AdapterView.OnItemClickListener {
+    private static final String logTag = "ListSwipeDetector";
     private Context context;
-    ListView list;
-    ProgressBarCircularIndetermininate pbci;
+    static BounceListView list;
+    private float downX, downY, upX, upY;
+    static ProgressBarCircularIndetermininate pbci;
     static String myapifilms1 = "http://www.myapifilms.com/imdb?title=";
     static String MYAPI = "";
     static String myapifilms3 = "&format=JSON&aka=0&business=1&seasons=0&seasonYear=0&te" +
@@ -42,7 +46,7 @@ public class Search extends ActionBarActivity implements AdapterView.OnItemClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_search);
-        list = (ListView) findViewById(R.id.list);
+        list = (BounceListView) findViewById(R.id.list);
         List<SqliteModel> sqlist = new ArrayList<>();
         pbci = (ProgressBarCircularIndetermininate) findViewById(R.id.progressbar_search);
         context = getApplicationContext();
@@ -77,6 +81,7 @@ public class Search extends ActionBarActivity implements AdapterView.OnItemClick
         }
 
         list.setOnItemClickListener(this);
+        list.setOnTouchListener(new swipeDetector());
     }
 
     @Override
@@ -110,9 +115,9 @@ public class Search extends ActionBarActivity implements AdapterView.OnItemClick
         } catch (Exception e) {
             Log.e("GET ON item CLick", e.toString());
         }
-        if (isOnline())
-            new MainActivity().startFragDup(lik, MYAPI);
-        else {
+        if (isOnline()) {
+            new MyTask(false).execute(lik, MYAPI);
+        } else {
             Toast.makeText(this, "Network isn't available", Toast.LENGTH_LONG).show();
         }
     }
@@ -126,4 +131,12 @@ public class Search extends ActionBarActivity implements AdapterView.OnItemClick
             return false;
         }
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        list.setVisibility(View.VISIBLE);
+    }
+
+
 }

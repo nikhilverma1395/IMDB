@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
@@ -20,21 +19,13 @@ import android.widget.Toast;
 
 import com.example.nikhilverma.imdb.Fragments.FirstRunDialog;
 import com.example.nikhilverma.imdb.Fragments.Rate_App_Dialog;
-import com.example.nikhilverma.imdb.Fragments.web;
 import com.example.nikhilverma.imdb.Models.ActorDetailModel;
 import com.example.nikhilverma.imdb.Models.Model;
 import com.example.nikhilverma.imdb.Models.SqliteModel;
-import com.example.nikhilverma.imdb.Models.Trailor_Model;
 import com.example.nikhilverma.imdb.R;
-import com.example.nikhilverma.imdb.parser.Actor_Detail_PARSER;
-import com.example.nikhilverma.imdb.parser.Http;
-import com.example.nikhilverma.imdb.parser.main_parser;
-import com.example.nikhilverma.imdb.sqlite.DataSource;
-import com.gc.materialdesign.views.ButtonFlat;
 import com.gc.materialdesign.views.ButtonFloat;
 import com.gc.materialdesign.views.ButtonRectangle;
 import com.gc.materialdesign.views.ProgressBarCircularIndetermininate;
-import com.gc.materialdesign.widgets.Dialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,11 +35,11 @@ import de.psdev.licensesdialog.LicensesDialogFragment;
 public class MainActivity extends ActionBarActivity {
 
     TextView output;
-    private static List<ActorDetailModel> list = new ArrayList<>();
-    private static List<SqliteModel> model_dick;
+    static List<ActorDetailModel> list = new ArrayList<>();
+    static List<SqliteModel> model_dick;
     public static int Constant_Shit;
-    MyTask task = new MyTask();
     static boolean MYAPIWORKING;
+    static FragmentManager fragmentManager;
 
     public static List<ActorDetailModel> getList() {
         return list;
@@ -64,10 +55,10 @@ public class MainActivity extends ActionBarActivity {
             "=0&bornDied=0&starSign=0&actorActress=0&actorTrivia=0&movieTrivia=0&awards=0";
     static String finall = null;
     static String newJson = "";
-    ButtonRectangle buttonclick;
+    static ButtonRectangle buttonclick;
     public static Context context = null;
-    ProgressBarCircularIndetermininate pb;
-    ButtonFloat b;
+    static ProgressBarCircularIndetermininate pb;
+    static ButtonFloat b;
     String title = "", yes = "";
     static EditText met, year;
     static ButtonRectangle bt;
@@ -102,6 +93,12 @@ public class MainActivity extends ActionBarActivity {
         context = getApplicationContext();
         model_dick = new ArrayList<>();
         Constant_Shit = 0;
+        fragmentManager = getSupportFragmentManager();
+    }
+
+
+    public void makemylist(final View fre) {
+        startActivity(new Intent(MainActivity.this, Search.class));
     }
 
     private void Rate() {
@@ -150,7 +147,7 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
-    public void startFragDup() {
+    public void startFrag(View v) {
         if (isOnline()) {
             Constant_Shit++;
             title = met.getText().toString();
@@ -188,14 +185,10 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-    public void startFrag(View v) {
-        startFragDup();
-    }
-
 
     private void requestData(String uri, String MYAPI) {
         Log.d("2", "executed data");
-        task.execute(uri, MYAPI);
+        new MyTask(true).execute(uri, MYAPI);
     }
 
     @Override
@@ -226,180 +219,11 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
         met.setVisibility(View.VISIBLE);
         year.setVisibility(View.VISIBLE);
         b.setVisibility(View.VISIBLE);
-
-
     }
 
-    public void makemylist(final View fre) {
-        startActivity(new Intent(MainActivity.this, Search.class));
-    }
-
-    public void setBit(String bbit, String[] det) {
-        final String bit = bbit;
-        final String[] dete = det;
-
-        if (bit == null)
-            Toast.makeText(getApplicationContext(), "BAKHCHODIII 232", Toast.LENGTH_LONG).show();
-        Intent xxx = new Intent(getApplicationContext(), Main_Content.class);
-        Log.d("9", "intent done");
-        xxx.putExtra("gtr", bit);
-        xxx.putExtra("detail", dete);
-        Log.d("10", "start acti");
-        startActivity(xxx);
-        Log.d("11", "startedact");
-    }
-
-
-    private class MyTask extends AsyncTask<String, String, Model> {
-        @Override
-        protected void onPreExecute() {
-            Log.d("3", "preexecuted");
-            met.setVisibility(View.INVISIBLE);
-            year.setVisibility(View.INVISIBLE);
-            b.setVisibility(View.INVISIBLE);
-            pb.setVisibility(View.VISIBLE);
-
-        }
-
-        @Override
-        protected Model doInBackground(String... params) {
-            try {
-                Log.d("4", "do in back");
-                String content = "";
-                try {
-                    content = Http.getData(params[0]);
-                    MainActivity.mo = main_parser.parseFeed(content);
-                    Log.e("json 1", "SUCCESS");
-                } catch (Exception ee) {
-                    Log.e("json 1", "Error j1 \n" + ee.toString());
-                }
-                try {
-                    newJson = Http.getData(params[1]);
-                    list = Actor_Detail_PARSER.parseFeednew(newJson);
-                    Log.e("json 2", "SUCCESS");
-                    MainActivity.MYAPIWORKING = true;
-                } catch (Exception ee) {
-                    MainActivity.MYAPIWORKING = false;
-                    Log.e("json 2", "Error j2 \n" + ee.toString());
-                }
-                if (MainActivity.mo != null) {
-                    Log.d("4", "sqlite_update");
-                    SqliteModel mod = new SqliteModel();
-
-                    try {
-                        mod.setTITLE(mo.getTitle());
-                        mod.setIMAGE_URL(mo.getPoster());
-                        mod.setRATING(Float.parseFloat(mo.getImdbRating()));
-                        mod.setYEAR(Integer.parseInt(mo.getYear()));
-
-                        Log.d("et", mod.getRATING() + mod.getTITLE() + mod.getIMAGE_URL() + Integer.parseInt(mo.getYear()) + "");
-                        new DataSource(context).create(mod);
-                    } catch (Exception e) {
-                        Log.e("Sqlite In Main Error", e.toString());
-                    }
-
-                    Log.d("6", "mo!=null return mo");
-                    return MainActivity.mo;
-                } else {
-                    Log.d("5", "mo==null");
-                    pb.setVisibility(View.INVISIBLE);
-                    return null;
-
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-                return null;
-            }
-        }
-
-        @Override
-        protected void onPostExecute(Model result) {
-            if (result == null && MainActivity.mo == null) {
-                Log.d("6", "result==null show dialog");
-                String MS = "Check the Name  For Spelling Mistake or Wrong Year  ";
-                final Dialog dialog = new Dialog(MainActivity.this, "Movie Not Found ! ", MS);
-                dialog.show();
-                ButtonFlat acceptButton = dialog.getButtonAccept();
-                acceptButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        met.setText("");
-                        year.setText("");
-                        dialog.hide();
-                    }
-                });
-                ButtonFlat cancelButton = dialog.getButtonCancel();
-                cancelButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        dialog.hide();
-                    }
-                });
-                met.setVisibility(View.VISIBLE);
-                year.setVisibility(View.VISIBLE);
-                b.setVisibility(View.VISIBLE);
-                buttonclick.setVisibility(ViewGroup.VISIBLE);
-                buttonclick.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        getSupportFragmentManager().beginTransaction().add(R.id.start, new web(finall + "\t imdb")).addToBackStack(null).commit();
-                        buttonclick.setVisibility(ViewGroup.GONE);
-                        pb.setVisibility(View.GONE);
-                    }
-                });
-            } else {
-                Log.d("7", "result!=null ");
-                pb.setVisibility(View.INVISIBLE);
-                final String bmp = result.getPoster();
-                if (bmp == null)
-                    Toast.makeText(getApplicationContext(), "BAKHCHODIII 23", Toast.LENGTH_LONG).show();
-                String film = "";
-                String shhootingllov, intern_tr, OTHER_q = "";
-                if (MainActivity.MYAPIWORKING) {
-                    if (!result.getFilmingLoc().equals("")) {
-                        for (String a : result.getFilmingLoc()) {
-                            film = film + "\t" + a + "\t" + ",";
-                        }
-                    } else film = "   N/A  ";
-
-                    if (film.length() == 0)
-                        film = "    N/A      ";
-                    intern_tr = "\t\t\t" + Actor_Detail_PARSER.title + "\n" + "\t\t" + Actor_Detail_PARSER.videoURL + "\t";
-                    if (intern_tr.length() == 0)
-                        intern_tr = " N/A      ";
-
-                    OTHER_q = "";
-                    for (Trailor_Model t : Actor_Detail_PARSER.list_te) {
-                        OTHER_q = OTHER_q + "\t \t" + t.getQuality() + "\t:\t" + t.getVideoURL() + "\t\n\n";
-                    }
-
-                    if (OTHER_q.length() == 0)
-                        OTHER_q = "\t\t\t\t Other Qualities :\t\t\t\t\n\n" + "\t\t\t\t N/A      ";
-                    else OTHER_q = "\t\t\t\t Other Qualities :\t\t\t\t\n" +
-                            "\t\t\t\t\n" + OTHER_q;
-                    shhootingllov = "Shooting Locations \t: \t " + film.substring(0, film.length() - 1);
-                } else {
-                    shhootingllov = OTHER_q = intern_tr = "N/A";
-                }
-                final String[] details = {result.getTitle() + " (" + result.getYear() + ")", "IMDB Rating : " + result.getImdbRating(),
-                        "Released Date : " + result.getReleased(), "Runtime : " + result.getRuntime(),
-                        "Language :" + result.getLanguage(), "Genre : " + result.getGenre()
-                        , "Director : " + result.getDirector(), "Writer : \t" + result.getWriter(),
-                        "\tActors :\t\t" + result.getActors(), "Awards : \t" + result.getAwards(),
-                        result.getPlot(),
-                        "Link :\t\thttp://www.imdb.com/title/" + result.getImdbID() + "/",
-                        "IMDB Votes \t\t" + result.getImdbVotes()
-                        , shhootingllov , intern_tr, OTHER_q};
-                Log.d("8", "Setbit");
-                setBit(bmp, details);
-            }
-        }
-
-    }
 
 }
 

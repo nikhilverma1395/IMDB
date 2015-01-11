@@ -21,6 +21,7 @@ import android.widget.ZoomControls;
 
 import com.example.nikhilverma.imdb.Fragments.web;
 import com.example.nikhilverma.imdb.R;
+import com.example.nikhilverma.imdb.Views.RoundedTransformation;
 import com.example.nikhilverma.imdb.sqlite.DataSource;
 import com.manuelpeinado.fadingactionbar.FadingActionBarHelper;
 import com.squareup.picasso.Picasso;
@@ -70,6 +71,7 @@ public class Main_Content extends ActionBarActivity {
         iv = (ImageView) findViewById(R.id.pid1);
         Picasso.with(this)
                 .load(byteArray)
+                .transform(new RoundedTransformation(28, 2))
                 .error(R.drawable.images)
                 .into(iv);
         movie_name = (TextView) findViewById(R.id.movie_name);
