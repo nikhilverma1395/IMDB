@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_frag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/back_bitch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.davemorrissey.labs.subscaleview.ScaleImageView
+            android:layout_width="320dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:id="@+id/image_frag"
+            android:scaleType="fitXY"
+            android:layout_height="480dp" />
+
+        <TextView
+            android:layout_margin="5dp"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:id="@+id/full_title"
+            android:textColor="@color/bright_foreground_material_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/bright_foreground_material_light"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:id="@+id/full_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

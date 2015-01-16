@@ -23,9 +23,9 @@ import java.util.List;
  * Created by Nikhil Verma on 07-01-2015.
  */
 public class ListAdapter extends BaseAdapter {
+    private static List<List_Model> movieItems;
     private Context activity;
     private LayoutInflater inflater;
-    private static List<List_Model> movieItems;
     private int Colors[] = {0xE690A4AE, 0xE6FF6E40, 0xE6BDBDBD, 0xE6FFCCBC, 0xE6BCAAA4, 0xE6FFAB40,
             0xE6FFE57F, 0xE6FFA000, 0xE6FFEB3B, 0xE6FFB74D, 0xE669F0AE, 0xE6CCFF90, 0xE6EEFF41, 0xE69CCC65, 0xE6E6EE9C, 0xE6004D40, 0xE60277BD, 0xE600ACC1, 0xE6009688
             , 0xE62962FF, 0xE63F51B5, 0xE6F44336, 0xE6BA68C8, 0xE6D81B60};
@@ -69,7 +69,7 @@ public class ListAdapter extends BaseAdapter {
         }
         Picasso.with(activity)
                 .load(movieItems.get(position).getURL())
-                .transform(new RoundedTransformation(20,2))
+                .transform(new RoundedTransformation(40, 1))
                 .error(R.drawable.images)
                 .into(vh.iv);
         vh.rate.setText(movieItems.get(position).getRating());
@@ -78,16 +78,13 @@ public class ListAdapter extends BaseAdapter {
         vh.rate.setTypeface(Typeface.createFromAsset(activity.getAssets(), "hyper.ttf"));
         vh.year.setTypeface(Typeface.createFromAsset(activity.getAssets(), "formal_regular.ttf"));
         vh.title.setTypeface(Typeface.createFromAsset(activity.getAssets(), "bol.TTF"));
-        try {
-            GradientDrawable gd = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{
-                    Colors[((int) movieItems.get(position).getTitle().charAt(0)) % 24],
-                    Colors[((int) movieItems.get(position).getTitle().charAt(movieItems.get(position).getTitle().length() - 1)) % 24]});
-            convertView.findViewById(R.id.bottomline).setBackgroundColor(Colors[((int) movieItems.get(position).getTitle().charAt(movieItems.get(position).getTitle().length() / 2)) % 24]);
-            convertView.findViewById(R.id.lllistback).setBackground(gd);
-            gd.setCornerRadius(18f);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        GradientDrawable gd = null;
+        // gd = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{
+        //          Colors[((int) movieItems.get(position).getTitle().charAt(0)) % 24],
+        //        Colors[((int) movieItems.get(position).getTitle().charAt(movieItems.get(position).getTitle().length() - 1)) % 24]});
+        //gd.setCornerRadius(18f);
+          convertView.findViewById(R.id.bottomline).setBackgroundColor(Colors[((int) movieItems.get(position).getTitle().charAt(movieItems.get(position).getTitle().length() / 2)) % 24]);
+         //convertView.findViewById(R.id.lllistback).setBackground(gd);
         return convertView;
     }
 

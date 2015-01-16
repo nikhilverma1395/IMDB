@@ -79,7 +79,7 @@ public class DataSource {
     }
 
     public List<SqliteModel> getAllMovies() {
-        List<SqliteModel> movielist = new ArrayList<>();
+        List<SqliteModel> movielist = new ArrayList<SqliteModel>();
         String Query = "SELECT  * FROM " + SqliteHelper.TABLE_MOVIE;
         open();
         Cursor cursor = sqLiteDatabase.rawQuery(Query, null);

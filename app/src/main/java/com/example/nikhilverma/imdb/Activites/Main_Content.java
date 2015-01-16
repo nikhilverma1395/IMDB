@@ -3,11 +3,11 @@ package com.example.nikhilverma.imdb.Activites;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.util.Log;
 import android.view.Menu;
@@ -19,8 +19,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ZoomControls;
 
+import com.example.nikhilverma.imdb.Fragments.image_frag;
 import com.example.nikhilverma.imdb.Fragments.web;
 import com.example.nikhilverma.imdb.R;
+import com.example.nikhilverma.imdb.Views.BlurBuilder;
 import com.example.nikhilverma.imdb.Views.RoundedTransformation;
 import com.example.nikhilverma.imdb.sqlite.DataSource;
 import com.manuelpeinado.fadingactionbar.FadingActionBarHelper;
@@ -36,21 +38,21 @@ import java.net.URL;
 //import com.manuelpein ado.fadingactionbar.FadingActionBarHelper;
 
 public class Main_Content extends ActionBarActivity {
-    private FadingActionBarHelper mFadingHelper;
-    static Bitmap _bitmapScaled, bitmap;
     public static Bitmap bmp = null;
-    float currentZoom = 1;
+    static Bitmap _bitmapScaled, bitmap;
     static Fragment actor_detail = null;
-    String byteArray;
     static int ActorDetailCheck;
-    ZoomControls zc;
     static Fragment f = null;
+    static String[] c;
+    float currentZoom = 1;
+    String byteArray;
+    ZoomControls zc;
     ImageView pid1;
     TextView oTHERQ, movie_name, internationalTrailor, movie_imdbrating, movie_year, movie_runtime, filmingloc,
             movie_language, movie_genre, movie_director, movie_writer, movie_actor, movie_awards, movie_plot, movie_link, movie_votes;
     ScaleAnimation scaleAnim;
     ImageView iv;
-    static String[] c;
+    private FadingActionBarHelper mFadingHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,8 +61,8 @@ public class Main_Content extends ActionBarActivity {
 
         //getActionBar().setHomeButtonEnabled(true);
         setContentView(R.layout.all_det);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar1);
-        setSupportActionBar(toolbar);
+        //      Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar1);
+//        setSupportActionBar(toolbar);
 
 
         Intent d = getIntent();
@@ -68,12 +70,16 @@ public class Main_Content extends ActionBarActivity {
         c = extras.getStringArray("detail");
         byteArray = extras.getString("gtr");
         f = new web(byteArray);
+        Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.backer);
+        Bitmap blurredImage = BlurBuilder.blur(getApplicationContext(), image);
         iv = (ImageView) findViewById(R.id.pid1);
-        Picasso.with(this)
+        findViewById(R.id.entrap_over).setBackground(new BitmapDrawable(getResources(), blurredImage));
+        Picasso.with(getApplicationContext())
                 .load(byteArray)
                 .transform(new RoundedTransformation(28, 2))
                 .error(R.drawable.images)
                 .into(iv);
+
         movie_name = (TextView) findViewById(R.id.movie_name);
         movie_imdbrating = (TextView) findViewById(R.id.movie_imdbrating);
         movie_year = (TextView) findViewById(R.id.movie_year);
@@ -163,12 +169,14 @@ public class Main_Content extends ActionBarActivity {
     }
 
     public void openWebview(final View v) {
-        getSupportFragmentManager().beginTransaction().add(R.id.contain, f).addToBackStack(null).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.contain_er, f).addToBackStack(null).commit();
     }
 
     public void openwithWeb(final View v) {
-        Log.e("LPGCAY", "hre");
-        getSupportFragmentManager().beginTransaction().add(R.id.contain, new web(c[11])).addToBackStack(null).commit();
+        String title = c[0] ;
+        String rating = c[1];
+        Log.d("logger", title + "\t" + rating);
+        getSupportFragmentManager().beginTransaction().add(R.id.contain_er, new image_frag(byteArray, title, rating)).addToBackStack(null).commit();
 
     }
 

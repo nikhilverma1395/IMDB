@@ -8,7 +8,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.TextView;
@@ -31,9 +30,7 @@ import java.util.List;
  */
 public class Search extends ActionBarActivity implements AdapterView.OnItemClickListener {
     private static final String logTag = "ListSwipeDetector";
-    private Context context;
     static BounceListView list;
-    private float downX, downY, upX, upY;
     static ProgressBarCircularIndetermininate pbci;
     static String myapifilms1 = "http://www.myapifilms.com/imdb?title=";
     static String MYAPI = "";
@@ -41,13 +38,15 @@ public class Search extends ActionBarActivity implements AdapterView.OnItemClick
             "chnical=0&filter=N&exactFilter=0&limit=1&year=";
     static String myapifilms5 = "&lang=en-us&actors=S&biography=0&trailer=1&uniqueName=0&filmography" +
             "=0&bornDied=0&starSign=0&actorActress=0&actorTrivia=0&movieTrivia=0&awards=0";
+    private Context context;
+    private float downX, downY, upX, upY;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_search);
         list = (BounceListView) findViewById(R.id.list);
-        List<SqliteModel> sqlist = new ArrayList<>();
+        List<SqliteModel> sqlist = new ArrayList<SqliteModel>();
         pbci = (ProgressBarCircularIndetermininate) findViewById(R.id.progressbar_search);
         context = getApplicationContext();
         TextView rt = (TextView) findViewById(R.id.error_inlist);
@@ -58,7 +57,7 @@ public class Search extends ActionBarActivity implements AdapterView.OnItemClick
             Toast.makeText(context, "2st", Toast.LENGTH_LONG).show();
             sqlist = source.getAllMovies();
             if (sqlist.size() != 0) {
-                List<List_Model> arraylist = new ArrayList<>();
+                List<List_Model> arraylist = new ArrayList<List_Model>();
                 for (SqliteModel sw : sqlist) {
                     List_Model listmo = new List_Model();
                     listmo.setTitle(sw.getTITLE());
@@ -94,31 +93,37 @@ public class Search extends ActionBarActivity implements AdapterView.OnItemClick
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        String lik = "";
-        DataSource sql = new DataSource(MainActivity.context);
-        try {
-            List<SqliteModel> sq = sql.getAllMovies();
-            String wer = sq.get(position).getTITLE();
-            wer = wer.trim();
-            String temp = "";
-            for (int i = 0; i < wer.length(); i++) {
-                if (wer.charAt(i) == ' ') {
-                    temp = temp + "%20";
-                } else {
-                    temp = temp + wer.charAt(i);
-                }
 
-            }
-            lik = "http://www.omdbapi.com/?t=" + temp + "&y=" + sq.get(position).getYEAR() + "&plot=full&r=json";
-            MYAPI = myapifilms1 + temp + myapifilms3 + sq.get(position).getYEAR() + myapifilms5;
-            Log.e("lik", lik + "\n" + MYAPI);
-        } catch (Exception e) {
-            Log.e("GET ON item CLick", e.toString());
-        }
-        if (isOnline()) {
-            new MyTask(false).execute(lik, MYAPI);
+        if (new swipeDetector().swipeDetected() && new swipeDetector().getAction() == swipeDetector.Action.RL) {
+
         } else {
-            Toast.makeText(this, "Network isn't available", Toast.LENGTH_LONG).show();
+            String lik = "";
+            DataSource sql = new DataSource(MainActivity.context);
+            try {
+                List<SqliteModel> sq = sql.getAllMovies();
+                String wer = sq.get(position).getTITLE();
+                wer = wer.trim();
+                String temp = "";
+                for (int i = 0; i < wer.length(); i++) {
+                    if (wer.charAt(i) == ' ') {
+                        temp = temp + "%20";
+                    } else {
+                        temp = temp + wer.charAt(i);
+                    }
+
+                }
+                lik = "http://www.omdbapi.com/?t=" + temp + "&y=" + sq.get(position).getYEAR() + "&plot=full&r=json";
+                MYAPI = myapifilms1 + temp + myapifilms3 + sq.get(position).getYEAR() + myapifilms5;
+                Log.e("lik", lik + "\n" + MYAPI);
+            } catch (Exception e) {
+                Log.e("GET ON item CLick", e.toString());
+            }
+            if (isOnline()) {
+                new MyTask(false).execute(lik, MYAPI);
+            } else {
+                Toast.makeText(this, "Network isn't available", Toast.LENGTH_LONG).show();
+            }
+
         }
     }
 

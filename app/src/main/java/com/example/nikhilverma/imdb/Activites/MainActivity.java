@@ -35,7 +35,7 @@ import de.psdev.licensesdialog.LicensesDialogFragment;
 public class MainActivity extends ActionBarActivity {
 
     TextView output;
-    static List<ActorDetailModel> list = new ArrayList<>();
+    static List<ActorDetailModel> list = new ArrayList<ActorDetailModel>();
     static List<SqliteModel> model_dick;
     public static int Constant_Shit;
     static boolean MYAPIWORKING;
@@ -91,7 +91,7 @@ public class MainActivity extends ActionBarActivity {
         makeFirstRunDialog();
         Rate();
         context = getApplicationContext();
-        model_dick = new ArrayList<>();
+        model_dick = new ArrayList<SqliteModel>();
         Constant_Shit = 0;
         fragmentManager = getSupportFragmentManager();
     }

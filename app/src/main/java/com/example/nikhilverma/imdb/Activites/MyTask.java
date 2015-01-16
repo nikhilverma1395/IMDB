@@ -103,7 +103,7 @@ public class MyTask extends AsyncTask<String, String, Model> {
     private boolean checkDuplicateSQLite(String title) {
         Log.e("Dup Check", "Grader");
         DataSource ds = new DataSource(MainActivity.context);
-        List<SqliteModel> lert = new ArrayList<>();
+        List<SqliteModel> lert = new ArrayList<SqliteModel>();
         lert = ds.getAllMovies();
         Log.e("Dup Check 34", lert.size() + "");
         for (SqliteModel sw : lert) {

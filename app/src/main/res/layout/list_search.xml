@@ -11,12 +11,18 @@
         android:layout_height="wrap_content"
         android:id="@+id/error_inlist"
         android:textSize="40sp"
+        android:textColor="@color/accent_red"
+        android:elevation="30dp"
         android:visibility="gone"
         android:text="Sorry No Records Available !"
-        android:gravity="center" />
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <com.example.nikhilverma.imdb.Views.BounceListView
         android:layout_marginTop="20dp"
+        android:scrollbars="none"
         android:id="@+id/list"
         android:clickable="true"
         android:layout_width="fill_parent"

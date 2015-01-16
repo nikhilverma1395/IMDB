@@ -20,13 +20,13 @@ public class Actor_Detail_PARSER {
     static String[] filming;
    public static String title = "",
      videoURL = "";
-    public  static List<Trailor_Model> list_te = new ArrayList<>();
+    public  static List<Trailor_Model> list_te = new ArrayList<Trailor_Model>();
 
 
     public static List<ActorDetailModel> parseFeednew(String content) {
         final String image_extra = "_LX32_CR13,0,0,0_AL_.jpg";
-        List<ActorDetailModel> list = new ArrayList<>();
-        List<Trailor_Model> list_t = new ArrayList<>();
+        List<ActorDetailModel> list = new ArrayList<ActorDetailModel>();
+        List<Trailor_Model> list_t = new ArrayList<Trailor_Model>();
        // list = null;
         //list_t = null;
         if (content.length() < 50)
