@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:background="@drawable/card_background_selector"
-        android:layout_height="wrap_content"
+        android:layout_height="160dp"
         android:id="@+id/lllistback"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
@@ -23,13 +23,12 @@
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:paddingBottom="15dp"
-
             android:descendantFocusability="afterDescendants">
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_margin="5dp"
-                android:background="#9E9E9E"
+                android:background="@android:color/transparent"
                 android:scaleType="fitXY"
                 android:id="@+id/search_list_image"
                 android:layout_height="120dp" />
@@ -41,7 +40,7 @@
                 android:layout_height="120dp">
 
                 <TextView
-                    android:textColor="#000000"
+                    android:textColor="#E0E0E0"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:gravity="left"
@@ -61,7 +60,7 @@
                     android:id="@+id/rating"
                     android:layout_marginRight="15dp"
                     android:layout_marginBottom="10dp"
-                    android:textColor="#000000"
+                    android:textColor="#E0E0E0"
                     android:textStyle="italic"
                     android:textSize="18sp"
                     android:layout_alignParentBottom="true"
@@ -73,26 +72,14 @@
                     android:id="@+id/year_search"
                     android:gravity="right"
                     android:layout_marginTop="6dp"
-                    android:textColor="#000000"
+                    android:textColor="#E0E0E0"
                     android:layout_marginLeft="10dp"
                     android:textSize="18sp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/title"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true" />
-
             </RelativeLayout>
-
-
         </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:gravity="bottom"
-        android:id="@+id/bottomline"
-        android:background="@color/primary"
-        android:orientation="horizontal"
-        android:layout_height="8dp" />
-
 </LinearLayout>

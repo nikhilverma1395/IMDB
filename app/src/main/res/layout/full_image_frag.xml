@@ -18,24 +18,33 @@
             android:scaleType="fitXY"
             android:layout_height="480dp" />
 
-        <TextView
-            android:layout_margin="5dp"
-            style="@style/TextAppearance.AppCompat.Title"
+        <LinearLayout
+            android:layout_margin="10dp"
             android:layout_gravity="center"
-            android:background="@android:color/transparent"
-            android:id="@+id/full_title"
-            android:textColor="@color/bright_foreground_material_light"
+            android:orientation="vertical"
+            android:background="#5efffff1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
 
-        <TextView
-            style="@style/TextAppearance.AppCompat.Title"
-            android:textColor="@color/bright_foreground_material_light"
-            android:background="@android:color/transparent"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:id="@+id/full_rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:layout_margin="5dp"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:id="@+id/full_title"
+                android:textColor="@color/bright_foreground_material_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/bright_foreground_material_light"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:id="@+id/full_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
     </LinearLayout>
 </FrameLayout>

@@ -26,6 +26,8 @@ import com.example.nikhilverma.imdb.Views.BlurBuilder;
 import com.example.nikhilverma.imdb.Views.RoundedTransformation;
 import com.example.nikhilverma.imdb.sqlite.DataSource;
 import com.manuelpeinado.fadingactionbar.FadingActionBarHelper;
+import com.melnykov.fab.FloatingActionButton;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
@@ -46,6 +48,7 @@ public class Main_Content extends ActionBarActivity {
     static String[] c;
     float currentZoom = 1;
     String byteArray;
+    FloatingActionButton bf;
     ZoomControls zc;
     ImageView pid1;
     TextView oTHERQ, movie_name, internationalTrailor, movie_imdbrating, movie_year, movie_runtime, filmingloc,
@@ -63,22 +66,33 @@ public class Main_Content extends ActionBarActivity {
         setContentView(R.layout.all_det);
         //      Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar1);
 //        setSupportActionBar(toolbar);
-
-
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.header_fab);
+        bf = (FloatingActionButton) findViewById(R.id.header_fab);
+        bf.setEnabled(false);
         Intent d = getIntent();
         Bundle extras = d.getExtras();
         c = extras.getStringArray("detail");
         byteArray = extras.getString("gtr");
         f = new web(byteArray);
         Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.backer);
-        Bitmap blurredImage = BlurBuilder.blur(getApplicationContext(), image);
+        Bitmap blurredImage = new BlurBuilder(15).BlurImage(image, getApplicationContext());
         iv = (ImageView) findViewById(R.id.pid1);
         findViewById(R.id.entrap_over).setBackground(new BitmapDrawable(getResources(), blurredImage));
         Picasso.with(getApplicationContext())
                 .load(byteArray)
                 .transform(new RoundedTransformation(28, 2))
                 .error(R.drawable.images)
-                .into(iv);
+                .into(iv, new Callback() {
+                    @Override
+                    public void onSuccess() {
+                        bf.setEnabled(true);
+                    }
+
+                    @Override
+                    public void onError() {
+
+                    }
+                });
 
         movie_name = (TextView) findViewById(R.id.movie_name);
         movie_imdbrating = (TextView) findViewById(R.id.movie_imdbrating);
@@ -173,7 +187,7 @@ public class Main_Content extends ActionBarActivity {
     }
 
     public void openwithWeb(final View v) {
-        String title = c[0] ;
+        String title = c[0];
         String rating = c[1];
         Log.d("logger", title + "\t" + rating);
         getSupportFragmentManager().beginTransaction().add(R.id.contain_er, new image_frag(byteArray, title, rating)).addToBackStack(null).commit();

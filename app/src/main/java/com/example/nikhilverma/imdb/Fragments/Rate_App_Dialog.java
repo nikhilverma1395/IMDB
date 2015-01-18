@@ -8,18 +8,18 @@ import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nikhilverma.imdb.R;
-import com.gc.materialdesign.views.ButtonRectangle;
 
 /**
  * Created by Nikhil Verma on 07-01-2015.
  */
 public class Rate_App_Dialog extends DialogFragment implements View.OnClickListener {
     private TextView body_rate;
-    private ButtonRectangle nothanks, later, rate;
+    private TextView nothanks, later, rate;
 
     public Rate_App_Dialog() {
     }
@@ -36,23 +36,21 @@ public class Rate_App_Dialog extends DialogFragment implements View.OnClickListe
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.rateapp, container, false);
         init(view);
-        setStyle(DialogFragment.STYLE_NORMAL,R.style.dialognikhil);
-        getDialog().setTitle(getArguments().getString("data.RATE"));
+        getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         rate.requestFocus();
         return view;
     }
 
     private void init(ViewGroup view) {
         body_rate = (TextView) view.findViewById(R.id.rate_body);
-        nothanks = (ButtonRectangle) view.findViewById(R.id.no_thanks);
-        later = (ButtonRectangle) view.findViewById(R.id.remind_later);
-        rate = (ButtonRectangle) view.findViewById(R.id.rateit);
+        nothanks = (TextView) view.findViewById(R.id.no_thanks);
+        later = (TextView) view.findViewById(R.id.remind_later);
+        rate = (TextView) view.findViewById(R.id.rateit);
         nothanks.setOnClickListener(this);
         later.setOnClickListener(this);
         rate.setOnClickListener(this);
-        String retr = "If you like the app\t" + getResources().getString(R.string.app_name) + "\tthen please take a moment to write " +
-                "a review and rate the app on the Play Store. This will go " +
-                "a long way towards supporting the development of this app.";
+
+        String retr = "If You Enjoy Using IMDB, please take a moment to rate it. Thanks for Your support! ";
         body_rate.setText(retr);
     }
 

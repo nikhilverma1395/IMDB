@@ -5,8 +5,8 @@ import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.TextView;
-
 
 import com.example.nikhilverma.imdb.R;
 import com.gc.materialdesign.views.ButtonRectangle;
@@ -16,9 +16,9 @@ import com.gc.materialdesign.views.ButtonRectangle;
  * Created by Nikhil Verma on 07-01-2015.
  */
 public class FirstRunDialog extends DialogFragment implements View.OnClickListener {
+    String tet;
     private TextView head, body;
     private ButtonRectangle b2;
-    String tet;
 
     public FirstRunDialog() {
     }
@@ -35,8 +35,7 @@ public class FirstRunDialog extends DialogFragment implements View.OnClickListen
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup v = (ViewGroup) inflater.inflate(R.layout.dialog_frament, container, false);
         init(v);
-        setStyle(DialogFragment.STYLE_NORMAL,R.style.dialognikhil);
-        getDialog().setTitle(getArguments().getString("data"));
+        getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         body.requestFocus();
         return v;
     }

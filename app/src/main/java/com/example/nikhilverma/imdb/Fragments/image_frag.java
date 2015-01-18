@@ -6,15 +6,10 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.renderscript.Allocation;
-import android.renderscript.Element;
-import android.renderscript.RenderScript;
-import android.renderscript.ScriptIntrinsicBlur;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -55,7 +50,8 @@ public class image_frag extends Fragment {
         final Activity activity = getActivity();
         Bitmap im = null;
         scaleImageView = (ScaleImageView) v.findViewById(R.id.image_frag);
-        try {
+        try
+        {
             im = BitmapFactory.decodeStream(new URL(urel).openConnection().getInputStream());
             im = new RoundedTransformation(20, 1).transform(im);
             scaleImageView.setImageBitmap(im);
@@ -63,49 +59,13 @@ public class image_frag extends Fragment {
             e.printStackTrace();
         }
         Bitmap tempbg = BitmapFactory.decodeResource(getResources(), android.R.color.transparent);
-        Bitmap final_Bitmap = BlurImage(im);
+        Bitmap final_Bitmap = new BlurBuilder(15).BlurImage(im, getActivity());
         TextView tv = (TextView) v.findViewById(R.id.full_title);
         TextView tv1 = (TextView) v.findViewById(R.id.full_rating);
         tv.setText(title);
         tv1.setText(rating);
-        v.findViewById(R.id.back_bitch).setBackground(new BitmapDrawable(final_Bitmap));
-        final View content = activity.findViewById(android.R.id.content).getRootView();
-        if (content.getWidth() > 0) {
-            Bitmap image = BlurBuilder.blur(content);
-            //  v.setBackground(new BitmapDrawable(activity.getResources(), image));
-        } else {
-            content.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-                @Override
-                public void onGlobalLayout() {
-                    Bitmap image = BlurBuilder.blur(content);
-                    //    v.setBackground(new BitmapDrawable(activity.getResources(), image));
-                }
-            });
-        }
+        Bitmap nmp = Bitmap.createScaledBitmap(final_Bitmap, 120, 120, false);
+        v.findViewById(R.id.back_bitch).setBackground(new BitmapDrawable(nmp));
         return v;
-    }
-
-    Bitmap BlurImage(Bitmap input) {
-        try {
-            RenderScript rsScript = RenderScript.create(getActivity());
-            Allocation alloc = Allocation.createFromBitmap(rsScript, input);
-
-            ScriptIntrinsicBlur blur = ScriptIntrinsicBlur.create(rsScript, Element.U8_4(rsScript));
-            blur.setRadius(21);
-            blur.setInput(alloc);
-
-            Bitmap result = Bitmap.createBitmap(input.getWidth(), input.getHeight(), Bitmap.Config.ARGB_8888);
-            Allocation outAlloc = Allocation.createFromBitmap(rsScript, result);
-
-            blur.forEach(outAlloc);
-            outAlloc.copyTo(result);
-
-            rsScript.destroy();
-            return result;
-        } catch (Exception e) {
-            // TODO: handle exception
-            return input;
-        }
-
     }
 }

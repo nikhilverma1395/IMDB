@@ -11,17 +11,6 @@
 
     </style>
 
-    <style name="dialognikhil">
-        <item name="colorPrimary">@color/primary_dark_red</item>
-        <item name="colorPrimaryDark">@color/accent_red</item>
-        <item name="colorAccent">@color/primary_red</item>
-        <item name="android:background">#bf8da76c</item>
-        <item name="android:dialogMessage">#424242</item>
-        <item name="android:dialogTitle">#283593</item>
-
-
-    </style>
-
     <style name="AppTheme2" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/primary_dark_red</item>
         <item name="colorPrimaryDark">@color/accent_red</item>

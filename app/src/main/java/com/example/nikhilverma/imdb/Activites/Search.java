@@ -66,9 +66,7 @@ public class Search extends ActionBarActivity implements AdapterView.OnItemClick
                     listmo.setYear(Integer.toString(sw.getYEAR()));
                     arraylist.add(listmo);
                 }
-
                 ListAdapter la = new ListAdapter(this, arraylist);
-                list.setAdapter(null);
                 list.setAdapter(la);
             } else {
                 rt.setVisibility(View.VISIBLE);

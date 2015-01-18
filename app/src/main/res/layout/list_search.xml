@@ -2,7 +2,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="#e2e4fe"
+    android:background="#424242"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/error_inlist"
         android:textSize="40sp"
+        android:background="@color/accent_material_dark"
         android:textColor="@color/accent_red"
         android:elevation="30dp"
         android:visibility="gone"
@@ -20,9 +21,25 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <TextView
+        android:elevation="30dp"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@android:color/holo_purple"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:text=" Recent Movies! Searched ! "
+        android:id="@+id/recent_tv"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/error_inlist"
+        android:layout_centerHorizontal="true" />
+
     <com.example.nikhilverma.imdb.Views.BounceListView
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:scrollbars="none"
+        android:layout_below="@id/recent_tv"
         android:id="@+id/list"
         android:clickable="true"
         android:layout_width="fill_parent"

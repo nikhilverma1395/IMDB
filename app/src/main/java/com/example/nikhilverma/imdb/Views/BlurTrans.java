@@ -2,30 +2,29 @@ package com.example.nikhilverma.imdb.Views;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.renderscript.Allocation;
 import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
-import android.view.View;
+
+import com.squareup.picasso.Transformation;
 
 /**
- * Created by Nikhil Verma on 1/16/2015.
+ * Created by Nikhil Verma on 1/18/2015.
  */
-public class BlurBuilder {
-    static int radius;
+public class BlurTrans implements Transformation {
+    private final int radius;
+    private final Context context;
 
-    public BlurBuilder(final int radius) {
+    public BlurTrans(final int radius, final Context context) {
         this.radius = radius;
+        this.context = context;
     }
 
-    public  Bitmap BlurImage(View view) {
-        return BlurImage(getScreenshot(view), view.getContext());
-    }
-
-    public  Bitmap BlurImage(Bitmap input, Context ctx) {
+    @Override
+    public Bitmap transform(Bitmap input) {
         try {
-            RenderScript rsScript = RenderScript.create(ctx);
+            RenderScript rsScript = RenderScript.create(context);
             Allocation alloc = Allocation.createFromBitmap(rsScript, input);
 
             ScriptIntrinsicBlur blur = ScriptIntrinsicBlur.create(rsScript, Element.U8_4(rsScript));
@@ -44,14 +43,10 @@ public class BlurBuilder {
             // TODO: handle exception
             return input;
         }
-
     }
 
-    private  Bitmap getScreenshot(View view) {
-        Bitmap bmp = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
-        Canvas c = new Canvas(bmp);
-        view.draw(c);
-        return bmp;
+    @Override
+    public String key() {
+        return "blurred";
     }
-
 }

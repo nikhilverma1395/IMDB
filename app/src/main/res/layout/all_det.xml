@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="#9E9E9E"
     android:id="@+id/contain_er"
@@ -13,6 +13,7 @@
         android:layout_height="match_parent">
 
         <ScrollView
+            android:id="@+id/fab__scroll_viewer"
             android:scrollbars="none"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -37,11 +38,11 @@
                         android:layout_margin="4dp"
                         android:id="@+id/pid1"
                         android:scaleType="fitXY"
-                        android:layout_height="480dp" />
+                        android:layout_height="520dp" />
 
 
                     <RelativeLayout
-
+                        android:elevation="40dp"
                         android:background="@android:color/transparent"
                         android:id="@+id/header_infos_container"
                         android:layout_width="match_parent"
@@ -50,6 +51,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:padding="16dp"
+                        android:gravity="center"
                         android:layout_gravity="center_horizontal|bottom">
 
 
@@ -77,18 +79,21 @@
 
                     </RelativeLayout>
 
-                    <com.gc.materialdesign.views.ButtonFloat
+                    <com.melnykov.fab.FloatingActionButton
                         android:id="@+id/header_fab"
-                        android:layout_width="56dp"
-                        android:onClick="openwithWeb"
-                        android:background="#e2415fbd"
-                        android:layout_height="56dp"
+                        android:layout_marginBottom="-100dp"
                         android:elevation="20dp"
-                        android:layout_marginBottom="-200dp"
                         android:layout_marginRight="10dp"
                         android:fadingEdgeLength="10dp"
-                        android:layout_gravity="right|center_vertical"
-                        materialdesign:animate="true" />
+                        android:onClick="openwithWeb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_open_with_grey600_48dp"
+                        fab:fab_colorNormal="#7986CB"
+                        fab:fab_colorPressed="#B2EBF2"
+                        fab:fab_colorRipple="#FF6E40" />
                 </FrameLayout>
 
 
