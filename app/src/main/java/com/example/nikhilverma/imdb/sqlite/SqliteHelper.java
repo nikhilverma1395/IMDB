@@ -17,14 +17,14 @@ public class SqliteHelper extends SQLiteOpenHelper {
     private static Context context = null;
     public static final String TABLE_MOVIE = "Recent";
 
-    public static final String COLUMN_ID = "movieID";
+    public static final String _ID = "_id";
     public static final String COLUMN_TITLE = "movieTitle";
     public static final String COLUMN_YEAR = "movieYear";
     public static final String COLUMN_IMAGE_URL = "movieImageUrl";
     public static final String COLUMN_RATING = "movieRating";
-
+    public static final String COLUMN_IDs = "_id";
     private final String TABLE_CREATE = "CREATE TABLE " + TABLE_MOVIE + " (" +
-            COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             COLUMN_TITLE + " TEXT, " +
             COLUMN_IMAGE_URL + " TEXT, " +
             COLUMN_RATING + " FLOAT,  " +

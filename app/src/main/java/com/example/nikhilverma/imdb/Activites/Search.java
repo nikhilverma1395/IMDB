@@ -1,6 +1,8 @@
 package com.example.nikhilverma.imdb.Activites;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -13,13 +15,13 @@ import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.nikhilverma.imdb.Adapters.ListAdapter;
-import com.example.nikhilverma.imdb.Models.List_Model;
+import com.example.nikhilverma.imdb.Adapters.mCursorAdapter;
 import com.example.nikhilverma.imdb.Models.SqliteModel;
 import com.example.nikhilverma.imdb.R;
 import com.example.nikhilverma.imdb.Views.BounceListView;
 import com.example.nikhilverma.imdb.Views.swipeDetector;
 import com.example.nikhilverma.imdb.sqlite.DataSource;
+import com.example.nikhilverma.imdb.sqlite.SqliteHelper;
 import com.gc.materialdesign.views.ProgressBarCircularIndetermininate;
 
 import java.util.ArrayList;
@@ -50,31 +52,20 @@ public class Search extends ActionBarActivity implements AdapterView.OnItemClick
         pbci = (ProgressBarCircularIndetermininate) findViewById(R.id.progressbar_search);
         context = getApplicationContext();
         TextView rt = (TextView) findViewById(R.id.error_inlist);
-        DataSource source = new DataSource(MainActivity.context);
+        rt.setVisibility(View.GONE);
         try {
-
-
-            Toast.makeText(context, "2st", Toast.LENGTH_LONG).show();
-            sqlist = source.getAllMovies();
-            if (sqlist.size() != 0) {
-                List<List_Model> arraylist = new ArrayList<List_Model>();
-                for (SqliteModel sw : sqlist) {
-                    List_Model listmo = new List_Model();
-                    listmo.setTitle(sw.getTITLE());
-                    listmo.setURL(sw.getIMAGE_URL());
-                    listmo.setRating(Float.toString(sw.getRATING()));
-                    listmo.setYear(Integer.toString(sw.getYEAR()));
-                    arraylist.add(listmo);
-                }
-                ListAdapter la = new ListAdapter(this, arraylist);
-                list.setAdapter(la);
-            } else {
-                rt.setVisibility(View.VISIBLE);
-            }
+            DataSource source = new DataSource(MainActivity.context);
+            source.open();
+            SQLiteDatabase sql = source.sqLiteDatabase;
+            Cursor query = sql.rawQuery("select rowid _id,* from " + SqliteHelper.TABLE_MOVIE, null);//only god and i know what i am doing
+            mCursorAdapter adapter = new mCursorAdapter(MainActivity.context, query);
+            list.setAdapter(adapter);
+//            rt.setVisibility(View.VISIBLE);
 
         } catch (Exception e) {
-            Log.e("List_Getting _ALL Movies", e.toString());
+            Log.e("Conecting to Database Error  : ", e.toString());
             rt.setVisibility(View.VISIBLE);
+            list.setVisibility(View.INVISIBLE);
         }
 
         list.setOnItemClickListener(this);

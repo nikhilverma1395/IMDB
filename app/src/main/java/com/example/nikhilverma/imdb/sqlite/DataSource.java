@@ -21,7 +21,7 @@ public class DataSource {
     //Logcat Tag
     private static final String LOG_CAT = "Sqlite";
     private static SQLiteOpenHelper sqLiteOpenHelper;
-    private static SQLiteDatabase sqLiteDatabase;
+    public SQLiteDatabase sqLiteDatabase;
 
     public DataSource(Context context) {
         sqLiteOpenHelper = new SqliteHelper(context);
@@ -51,7 +51,7 @@ public class DataSource {
 
     public SqliteModel get(int id) {
         SqliteModel model = null;
-        String Query = "SELECT  * FROM " + SqliteHelper.TABLE_MOVIE + " WHERE " + SqliteHelper.COLUMN_ID + "=" + id + ";";
+        String Query = "SELECT  * FROM " + SqliteHelper.TABLE_MOVIE + " WHERE " + SqliteHelper._ID + "=" + id + ";";
         Log.i(LOG_CAT, Query);
         if (!sqLiteDatabase.isOpen())
             open();
@@ -61,7 +61,7 @@ public class DataSource {
         if (cursor != null && cursor.moveToFirst()) {
             try {
                 Log.i(LOG_CAT, "2");
-                model.setID(cursor.getColumnIndex(SqliteHelper.COLUMN_ID));
+                model.setID(cursor.getColumnIndex(SqliteHelper._ID));
                 Log.i(LOG_CAT, "3");
                 model.setTITLE(cursor.getString(cursor.getColumnIndex(SqliteHelper.COLUMN_TITLE)));
                 Log.i(LOG_CAT, "4");
