@@ -180,7 +180,7 @@ public class MainActivity extends ActionBarActivity {
 
 //            Toast.makeText(getApplicationContext(), "Im here", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, "Network isn't available", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, " Network isn't available", Toast.LENGTH_LONG).show();
         }
 
     }

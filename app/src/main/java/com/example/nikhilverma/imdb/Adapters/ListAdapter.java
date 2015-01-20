@@ -44,7 +44,6 @@ public class ListAdapter extends BaseAdapter {
     public int getCount() {
         return movieItems.size();
     }
-
     @Override
     public Object getItem(int position) {
         return movieItems.get(position);
@@ -58,7 +57,9 @@ public class ListAdapter extends BaseAdapter {
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
+
         ViewHolder vh;
+
         if (convertView == null) {
             inflater = (LayoutInflater) activity
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -76,6 +77,7 @@ public class ListAdapter extends BaseAdapter {
         final ImageView ivf = vh.iv;
         final LinearLayout ll = (LinearLayout) convertView.findViewById(R.id.lllistback);
         final View covertVieww = convertView;
+
         Picasso.with(activity)
                 .load(movieItems.get(position).getURL())
                 .resize(300, 300)
@@ -118,7 +120,6 @@ public class ListAdapter extends BaseAdapter {
         //      Colors[((int) movieItems.get(position).getTitle().charAt(0)) % 24],
         //    Colors[((int) movieItems.get(position).getTitle().charAt(movieItems.get(position).getTitle().length() - 1)) % 24]});
         // gd.setCornerRadius(18f);
-
         return convertView;
     }
 
