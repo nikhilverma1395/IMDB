@@ -1,5 +1,7 @@
 package com.example.nikhilverma.imdb.Activites;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -7,11 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.nikhilverma.imdb.Fragments.web;
+import com.example.nikhilverma.imdb.Models.ActorDetailModel;
 import com.example.nikhilverma.imdb.Models.Model;
 import com.example.nikhilverma.imdb.Models.SqliteModel;
 import com.example.nikhilverma.imdb.Models.Trailor_Model;
-import com.example.nikhilverma.imdb.R;
 import com.example.nikhilverma.imdb.parser.Actor_Detail_PARSER;
 import com.example.nikhilverma.imdb.parser.Http;
 import com.example.nikhilverma.imdb.parser.main_parser;
@@ -26,14 +27,30 @@ import java.util.List;
  * Created by Nikhil Verma on 08-01-2015.
  */
 public class MyTask extends AsyncTask<String, String, Model> {
+    public static Model mo;
     static boolean Act_List;
+    static boolean OMD;
+    static List<ActorDetailModel> list = new ArrayList<>();
+    static Context contextw;
+    static List<SqliteModel> lert;
+    static SqliteModel mod;
+    public int anim_time;
+    String content = " ", content2 = " ";
 
-    MyTask(boolean what) {
+    MyTask(boolean what, Context context) {
+        contextw = context;
         Act_List = what;
+    }
+
+    public static List<ActorDetailModel> getList() {
+        return list;
     }
 
     @Override
     protected void onPreExecute() {
+        OMD = false;
+        mo = null;
+        anim_time = contextw.getResources().getInteger(android.R.integer.config_longAnimTime);
         if (Act_List) {
             Log.d("3", "preexecuted");
             MainActivity.met.setVisibility(View.INVISIBLE);
@@ -44,6 +61,7 @@ public class MyTask extends AsyncTask<String, String, Model> {
             Search.pbci.setVisibility(View.VISIBLE);
             Search.list.setVisibility(View.INVISIBLE);
         }
+
     }
 
     @Override
@@ -51,48 +69,59 @@ public class MyTask extends AsyncTask<String, String, Model> {
 
         try {
             Log.d("4", "do in back");
-            String content = "";
+
             try {
                 content = Http.getData(params[0]);
-                MainActivity.mo = main_parser.parseFeed(content);
+                Log.e("json 1", content);
+                mo = main_parser.parseFeed(content);
                 Log.e("json 1", "SUCCESS");
+                OMD = true;
             } catch (Exception ee) {
+                mo = null;
                 Log.e("json 1", "Error j1 \n" + ee.toString());
+                OMD = false;
             }
             try {
-                MainActivity.newJson = Http.getData(params[1]);
-                MainActivity.list = Actor_Detail_PARSER.parseFeednew(MainActivity.newJson);
+                content2 = Http.getData(params[1]);
+                list = Actor_Detail_PARSER.parseFeednew(content2);
                 Log.e("json 2", "SUCCESS");
                 MainActivity.MYAPIWORKING = true;
             } catch (Exception ee) {
-                MainActivity.MYAPIWORKING = false;
+                list = null;
                 Log.e("json 2", "Error j2 \n" + ee.toString());
+                MainActivity.MYAPIWORKING = false;
             }
-            if (MainActivity.mo != null && Act_List && checkDuplicateSQLite(MainActivity.mo.getTitle())) {
+            Log.d("title", mo.getTitle());
+            if (mo != null && Act_List && checkDuplicateSQLite(mo.getTitle())) {
                 Log.d("4", "sqlite_update");
-                SqliteModel mod = new SqliteModel();
+                mod = new SqliteModel();
 
                 try {
-                    mod.setTITLE(MainActivity.mo.getTitle());
-                    mod.setIMAGE_URL(MainActivity.mo.getPoster());
-                    mod.setRATING(Float.parseFloat(MainActivity.mo.getImdbRating()));
-                    mod.setYEAR(Integer.parseInt(MainActivity.mo.getYear()));
+                    mod.setTITLE(mo.getTitle());
+                    mod.setIMAGE_URL(mo.getPoster());
+                    mod.setRATING(Float.parseFloat(mo.getImdbRating()));
+                    mod.setYEAR(mo.getYear());
+                    Log.d("et", mod.getRATING() + mod.getTITLE() + mod.getIMAGE_URL() + mo.getYear() + "");
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            new DataSource(MainActivity.context).create(mod);
+                        }
+                    }).start();
 
-                    Log.d("et", mod.getRATING() + mod.getTITLE() + mod.getIMAGE_URL() + Integer.parseInt(MainActivity.mo.getYear()) + "");
-                    new DataSource(MainActivity.context).create(mod);
                 } catch (Exception e) {
                     Log.e("Sqlite In Main Error", e.toString());
                 }
 
                 Log.d("6", "mo!=null return mo");
-                return MainActivity.mo;
-            } else if (MainActivity.mo == null) {
+                return mo;
+            }
+            if (mo == null) {
                 Log.d("5", "mo==null");
                 MainActivity.pb.setVisibility(View.INVISIBLE);
                 return null;
-
             } else {
-                return MainActivity.mo;
+                return mo;
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -101,15 +130,14 @@ public class MyTask extends AsyncTask<String, String, Model> {
     }
 
     private boolean checkDuplicateSQLite(String title) {
-        Log.e("Dup Check", "Grader");
-        DataSource ds = new DataSource(MainActivity.context);
-        List<SqliteModel> lert = new ArrayList<SqliteModel>();
-        lert = ds.getAllMovies();
-        Log.e("Dup Check 34", lert.size() + "");
+        Log.e("Dup Check", "dup check Grader" + title);
+        final DataSource ds_babe = new DataSource(MainActivity.context);
+        lert = new ArrayList<>();
+        lert = ds_babe.getAllMovies();
         for (SqliteModel sw : lert) {
-
+            if (isCancelled())
+                break;
             if (sw.getTITLE().toString().equals(title)) {
-                Log.e("Dup Check", sw.getTITLE() + "" + title + "\n");
                 return false;
             }
         }
@@ -118,16 +146,18 @@ public class MyTask extends AsyncTask<String, String, Model> {
 
     @Override
     protected void onPostExecute(Model result) {
-        if (result == null && MainActivity.mo == null && Act_List) {
+        if (result == null && Act_List) {
+        MainActivity.pb.setVisibility(View.GONE);
             Log.d("6", "result==null show dialog");
             String MS = "Check the Name  For Spelling Mistake or Wrong Year  ";
-            final Dialog dialog = new Dialog(MainActivity.context, "Movie Not Found ! ", MS);
+            final Dialog dialog = new Dialog(contextw, "Movie Not Found ! ", MS);
             dialog.show();
+
             ButtonFlat acceptButton = dialog.getButtonAccept();
             acceptButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    MainActivity.met.setText("");
+                    //MainActivity.met.setText("");
                     MainActivity.year.setText("");
                     dialog.hide();
                 }
@@ -139,28 +169,67 @@ public class MyTask extends AsyncTask<String, String, Model> {
                     dialog.hide();
                 }
             });
-            MainActivity.met.setVisibility(View.VISIBLE);
-            MainActivity.year.setVisibility(View.VISIBLE);
-            MainActivity.b.setVisibility(View.VISIBLE);
+            MainActivity.met.setVisibility(View.INVISIBLE);
+            MainActivity.year.setVisibility(View.INVISIBLE);
+            MainActivity.b.setVisibility(View.INVISIBLE);
             MainActivity.buttonclick.setVisibility(ViewGroup.VISIBLE);
+            MainActivity.buttonclick_reset.setVisibility(ViewGroup.VISIBLE);
             MainActivity.buttonclick.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    MainActivity.fragmentManager.beginTransaction().add(R.id.start, new web(MainActivity.GOOG + "\t imdb")).addToBackStack(null).commit();
+                    Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+                    String query = MainActivity.met.getText().toString();
+                    intent.putExtra(SearchManager.QUERY, query + "\t Imdb");
+                    contextw.startActivity(intent);
                     MainActivity.buttonclick.setVisibility(ViewGroup.GONE);
                     MainActivity.pb.setVisibility(View.GONE);
+                    MainActivity.buttonclick_reset.setVisibility(ViewGroup.GONE);
                 }
             });
+            MainActivity.buttonclick_reset.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Name Field
+                    MainActivity.pb.setVisibility(View.GONE);
+                    MainActivity.met.setVisibility(View.VISIBLE);
+                    float gy = MainActivity.met.getTranslationX();
+                    MainActivity.met.setTranslationX(1080);
+                    Log.d("sdsd", gy + "");
+                    MainActivity.met.animate().translationX(gy).setDuration(anim_time).setListener(null);
+//Year Field
+
+                    MainActivity.year.setVisibility(View.VISIBLE);
+                    float gey = MainActivity.year.getTranslationX();
+                    MainActivity.year.setTranslationX(1100);
+                    Log.d("sdsd", gy + "");
+                    MainActivity.year.animate().translationX(gey).setDuration(anim_time).setListener(null);
+                    //Button
+                    MainActivity.b.setVisibility(View.VISIBLE);
+                    float trYButton = MainActivity.b.getTranslationY();
+                    MainActivity.b.setTranslationY(1950);
+                    MainActivity.b.animate().translationY(trYButton).setDuration(anim_time).setListener(null);
+
+                    MainActivity.buttonclick.setVisibility(ViewGroup.GONE);
+                    MainActivity.buttonclick_reset.setVisibility(ViewGroup.GONE);
+                    MainActivity.met.setText("");
+                    MainActivity.year.setText("");
+
+                }
+            });
+
         } else {
             Log.d("7", "result!=null ");
             if (Act_List)
                 MainActivity.pb.setVisibility(View.INVISIBLE);
-            final String bmp = result.getPoster();
-            if (bmp == null)
-                Toast.makeText(MainActivity.context, "BAKHCHODIII 23", Toast.LENGTH_LONG).show();
+            String bmp = "";
+            try {
+                bmp = result.getPoster();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             String film = "";
             String shhootingllov, intern_tr, OTHER_q = "";
-            if (MainActivity.MYAPIWORKING) {
+            if (OMD) {
                 if (!result.getFilmingLoc().equals("")) {
                     for (String a : result.getFilmingLoc()) {
                         film = film + "\t" + a + "\t" + ",";
@@ -194,7 +263,7 @@ public class MyTask extends AsyncTask<String, String, Model> {
                     result.getPlot(),
                     "Link :\t\thttp://www.imdb.com/title/" + result.getImdbID() + "/",
                     "IMDB Votes \t\t" + result.getImdbVotes()
-                    , shhootingllov, intern_tr, OTHER_q};
+                    , shhootingllov, intern_tr, OTHER_q, result.getImdbRating()};
             Log.d("8", "Setbit");
             setBit(bmp, details);
         }
@@ -214,9 +283,8 @@ public class MyTask extends AsyncTask<String, String, Model> {
         Log.d("10", "start acti");
         if (!MyTask.Act_List)
             Search.pbci.setVisibility(View.GONE);
-        MainActivity.context.startActivity(xxx);
+        contextw.startActivity(xxx);
 
-        Log.d("11", "startedact");
     }
 }
 

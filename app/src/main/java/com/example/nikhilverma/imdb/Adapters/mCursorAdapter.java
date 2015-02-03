@@ -2,21 +2,24 @@ package com.example.nikhilverma.imdb.Adapters;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.graphics.Bitmap;
 import android.graphics.Typeface;
-import android.graphics.drawable.BitmapDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.CursorAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.nikhilverma.imdb.Activites.MainActivity;
 import com.example.nikhilverma.imdb.R;
-import com.example.nikhilverma.imdb.Views.BlurBuilder;
-import com.example.nikhilverma.imdb.Views.RoundedTransformation;
+import com.example.nikhilverma.imdb.sqlite.DataSource;
 import com.example.nikhilverma.imdb.sqlite.SqliteHelper;
+import com.gc.materialdesign.views.ProgressBarCircularIndeterminate;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
@@ -24,76 +27,127 @@ import com.squareup.picasso.Picasso;
  * Created by Nikhil Verma on 1/18/2015.
  */
 public class mCursorAdapter extends CursorAdapter {
-    public mCursorAdapter(Context context, Cursor c) {
+    public static long url_id;
+    static boolean show_error;
+    static TextView error;
+    boolean bub = true;
+    private ListView listView;
+    private Context context;
+
+    public mCursorAdapter(Context context, Cursor c, ListView listView, TextView error1) {
         super(context, c, 0);
+        context = context;
+        this.error = error1;
+        this.listView = listView;
     }
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
-        return LayoutInflater.from(context).inflate(R.layout.search_list_row, parent, false);
-
+        View v = LayoutInflater.from(context).inflate(R.layout.list_mag, parent, false);
+        ViewHolder vh = new ViewHolder();
+        vh.iv = (ImageView) v.findViewById(R.id.search_list_image);
+        vh.titletv = (TextView) v.findViewById(R.id.title);
+        vh.pbci = (ProgressBarCircularIndeterminate) v.findViewById(R.id.progressBar_list_row);
+        vh.ratetv = (TextView) v.findViewById(R.id.rating);
+        vh.yeartv = (TextView) v.findViewById(R.id.year_search);
+        vh.imageButton = (ImageButton) v.findViewById(R.id.imageButton_delete);
+        vh.ll = (RelativeLayout) v.findViewById(R.id.main_rel);
+        vh.errorinlist = (TextView) v.findViewById(R.id.error_inlist);
+        v.setTag(vh);
+        return v;
     }
 
     @Override
-    public void bindView(final View convertView, final Context context, Cursor cursor) {
-        ImageView iv;
-        TextView titletv, ratetv, yeartv;
-        iv = (ImageView) convertView.findViewById(R.id.search_list_image);
-        titletv = (TextView) convertView.findViewById(R.id.title);
-        ratetv = (TextView) convertView.findViewById(R.id.rating);
-        yeartv = (TextView) convertView.findViewById(R.id.year_search);
-        final ImageView ivf = iv;
-        final LinearLayout ll = (LinearLayout) convertView.findViewById(R.id.lllistback);
-        String url = cursor.getString(cursor.getColumnIndexOrThrow(SqliteHelper.COLUMN_IMAGE_URL));
+    public void bindView(final View convertView, final Context context, final Cursor cursor) {
+        final int position = cursor.getPosition();
+        int lastPosition = -1;
+
+        final ViewHolder vh = (ViewHolder) convertView.getTag();
+        final ImageView ivf = vh.iv;
+        url_id = cursor.getLong(cursor.getColumnIndexOrThrow(SqliteHelper.COLUMN_IDs));
+        final String url = cursor.getString(cursor.getColumnIndexOrThrow(SqliteHelper.COLUMN_IMAGE_URL));
         String title = cursor.getString(cursor.getColumnIndexOrThrow(SqliteHelper.COLUMN_TITLE));
         String year = cursor.getString(cursor.getColumnIndexOrThrow(SqliteHelper.COLUMN_YEAR));
         String rating = cursor.getString(cursor.getColumnIndexOrThrow(SqliteHelper.COLUMN_RATING));
+        final RelativeLayout lel = vh.ll;
         final View covertVieww = convertView;
+        //  final Dialog dialog = new Dialog(context, " Delete Confirmation ", " Do You Want to Delete " + "\t " + title + "?");
+        vh.imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // dialog.show();
+                //  ButtonFlat acceptButton = dialog.getButtonAccept();
+
+                convertView.animate().setDuration(350)
+                        .alpha(0)
+                        .translationX(1080)
+                        .withEndAction(new Runnable() {
+                            @Override
+                            public void run() {
+                                deleteFromDatabase(url_id, cursor.getCount());
+                                cursor.requery();
+
+                                notifyDataSetChanged();
+                            }
+                        });
+
+
+            }
+        });
+        vh.pbci.setVisibility(View.VISIBLE);
         Picasso.with(context)
                 .load(url)
-                .resize(300, 300)
-                .transform(new RoundedTransformation(40, 1))
+                .resize(200, 300)
                 .error(R.drawable.images)
-                .into(iv, new Callback() {
+                .into(vh.iv, new Callback() {
                     @Override
                     public void onSuccess() {
-
-                        ivf.buildDrawingCache(true);
-                        Bitmap bitmap = ivf.getDrawingCache(true);
-                        BitmapDrawable drawable = (BitmapDrawable) ivf.getDrawable();
-
-                        Bitmap gt = drawable.getBitmap();
-                        //ll.setBackground(gd);
-
-                        try {
-                            ll.setBackground(new BitmapDrawable(new BlurBuilder(12).BlurImage(gt, context)));
-                        } catch (Exception w) {
-                            w.printStackTrace();
-                        }
+                        vh.pbci.setVisibility(View.INVISIBLE);
                     }
 
                     @Override
                     public void onError() {
-                        BitmapDrawable bd = (BitmapDrawable) context.getResources().getDrawable(R.drawable.back_gradient);
-                        Bitmap blurred = new BlurBuilder(11).BlurImage(bd.getBitmap(), context);
-                        blurred = new RoundedTransformation(20, 0).transform(blurred);
-                        ll.setBackground(new BitmapDrawable(blurred));
+                        vh.pbci.setVisibility(View.GONE);
                     }
                 });
-        ratetv.setText(rating);
-        titletv.setText(title);
-        yeartv.setText(year);
-        ratetv.setTypeface(Typeface.createFromAsset(context.getAssets(), "hyper.ttf"));
-        yeartv.setTypeface(Typeface.createFromAsset(context.getAssets(), "formal_regular.ttf"));
-        titletv.setTypeface(Typeface.createFromAsset(context.getAssets(), "bol.TTF"));
-        // GradientDrawable gd = null;
-        //gd = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{
-        //      Colors[((int) movieItems.get(position).getTitle().charAt(0)) % 24],
-        //    Colors[((int) movieItems.get(position).getTitle().charAt(movieItems.get(position).getTitle().length() - 1)) % 24]});
-        // gd.setCornerRadius(18f);
+        vh.ratetv.setText(rating);
+        vh.titletv.setText(title);
+        vh.yeartv.setText("\t|\t" + year);
+        vh.ratetv.setTypeface(Typeface.createFromAsset(context.getAssets(), "hyper.ttf"));
+        vh.yeartv.setTypeface(Typeface.createFromAsset(context.getAssets(), "formal_regular.ttf"));
+        vh.titletv.setTypeface(Typeface.createFromAsset(context.getAssets(), "bol.TTF"));
+        Animation animation = AnimationUtils.loadAnimation(context, (position > lastPosition) ? R.anim.up_from_bottom : R.anim.bottom_from_top);
+        convertView.startAnimation(animation);
+    }
+
+    private void deleteFromDatabase(final long url_id, final long counts) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                DataSource ds = new DataSource(MainActivity.context);
+                ds.deleteFromId(url_id);
+
+            }
+        }).start();
+        try {
+            if (counts == 1) {
+                listView.setVisibility(View.INVISIBLE);
+                error.setVisibility(View.VISIBLE);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
+    private class ViewHolder {
+        TextView titletv, ratetv, yeartv, errorinlist;
+        ImageView iv;
+        ImageButton imageButton;
+        ProgressBarCircularIndeterminate pbci;
+        RelativeLayout ll;
 
+    }
 }
+
 

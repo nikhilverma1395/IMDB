@@ -3,7 +3,6 @@ package com.example.nikhilverma.imdb.Activites;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.Fragment;
@@ -23,8 +22,7 @@ import com.example.nikhilverma.imdb.Fragments.image_frag;
 import com.example.nikhilverma.imdb.Fragments.web;
 import com.example.nikhilverma.imdb.R;
 import com.example.nikhilverma.imdb.Views.BlurBuilder;
-import com.example.nikhilverma.imdb.Views.RoundedTransformation;
-import com.example.nikhilverma.imdb.sqlite.DataSource;
+import com.gc.materialdesign.views.ProgressBarCircularIndeterminate;
 import com.manuelpeinado.fadingactionbar.FadingActionBarHelper;
 import com.melnykov.fab.FloatingActionButton;
 import com.squareup.picasso.Callback;
@@ -41,6 +39,8 @@ import java.net.URL;
 
 public class Main_Content extends ActionBarActivity {
     public static Bitmap bmp = null;
+    public static boolean loadBlur;
+    public static ImageView iv;
     static Bitmap _bitmapScaled, bitmap;
     static Fragment actor_detail = null;
     static int ActorDetailCheck;
@@ -50,11 +50,13 @@ public class Main_Content extends ActionBarActivity {
     String byteArray;
     FloatingActionButton bf;
     ZoomControls zc;
+    //RatingBar rb;
+    ProgressBarCircularIndeterminate pbci_mc;
     ImageView pid1;
     TextView oTHERQ, movie_name, internationalTrailor, movie_imdbrating, movie_year, movie_runtime, filmingloc,
             movie_language, movie_genre, movie_director, movie_writer, movie_actor, movie_awards, movie_plot, movie_link, movie_votes;
     ScaleAnimation scaleAnim;
-    ImageView iv;
+    int ratingbarvalue;
     private FadingActionBarHelper mFadingHelper;
 
     @Override
@@ -62,14 +64,15 @@ public class Main_Content extends ActionBarActivity {
 
         super.onCreate(savedInstanceState);
 
-        //getActionBar().setHomeButtonEnabled(true);
-        setContentView(R.layout.all_det);
-        //      Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar1);
-//        setSupportActionBar(toolbar);
+        setContentView(R.layout.all_det1);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.header_fab);
+        pbci_mc = (ProgressBarCircularIndeterminate) findViewById(R.id.progressBar_main_content);
+        pbci_mc.setVisibility(View.VISIBLE);
         bf = (FloatingActionButton) findViewById(R.id.header_fab);
         bf.setEnabled(false);
         Intent d = getIntent();
+        loadBlur = false;
+        //rb = (RatingBar) findViewById(R.id.rating_bar_new_alldet);
         Bundle extras = d.getExtras();
         c = extras.getStringArray("detail");
         byteArray = extras.getString("gtr");
@@ -77,23 +80,26 @@ public class Main_Content extends ActionBarActivity {
         Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.backer);
         Bitmap blurredImage = new BlurBuilder(15).BlurImage(image, getApplicationContext());
         iv = (ImageView) findViewById(R.id.pid1);
-        findViewById(R.id.entrap_over).setBackground(new BitmapDrawable(getResources(), blurredImage));
         Picasso.with(getApplicationContext())
                 .load(byteArray)
-                .transform(new RoundedTransformation(28, 2))
+                .resize(400,600)
+                .placeholder(R.drawable.image_bef)
                 .error(R.drawable.images)
                 .into(iv, new Callback() {
                     @Override
                     public void onSuccess() {
+                        pbci_mc.setVisibility(View.GONE);
                         bf.setEnabled(true);
+                        loadBlur = true;
                     }
 
                     @Override
                     public void onError() {
-
+                        pbci_mc.setVisibility(View.GONE);
+                        bf.setEnabled(false);
+                        loadBlur = false;
                     }
                 });
-
         movie_name = (TextView) findViewById(R.id.movie_name);
         movie_imdbrating = (TextView) findViewById(R.id.movie_imdbrating);
         movie_year = (TextView) findViewById(R.id.movie_year);
@@ -126,19 +132,14 @@ public class Main_Content extends ActionBarActivity {
         filmingloc.setText(c[13]);
         internationalTrailor.setText(c[14]);
         oTHERQ.setText(c[15]);
-
-        //
-
-        Toast.makeText(this, new DataSource(MainActivity.context).getMoviesCount() + "", Toast.LENGTH_LONG).show();
-
-        //
-
+//        Toast.makeText(this, new DataSource(MainActivity.context).getMoviesCount() + "", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_settings) {
             try {
+
                 InputStream in = (InputStream) new URL(byteArray).getContent();
                 BitmapFactory.Options options = new BitmapFactory.Options();
                 options.inScaled = false;
@@ -173,7 +174,7 @@ public class Main_Content extends ActionBarActivity {
             Toast.makeText(this, "Details Not Available , API Is Down :( ", Toast.LENGTH_LONG).show();
             v.findViewById(R.id.view_actor_detail).setEnabled(false);
         } else {
-            if (MainActivity.getList() != null) {
+            if (MyTask.getList() != null) {
                 Intent d = new Intent(Main_Content.this, ActorDetail.class);
                 startActivity(d);
             } else
@@ -189,16 +190,14 @@ public class Main_Content extends ActionBarActivity {
     public void openwithWeb(final View v) {
         String title = c[0];
         String rating = c[1];
-        Log.d("logger", title + "\t" + rating);
-        getSupportFragmentManager().beginTransaction().add(R.id.contain_er, new image_frag(byteArray, title, rating)).addToBackStack(null).commit();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .setCustomAnimations(R.anim.slide,0,0, R.anim.slide_re)
+                .add(R.id.contain_er, new image_frag(byteArray, title, rating))
+                .addToBackStack(null)
+                .commit();
 
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        if (f.isAdded())
-            getSupportFragmentManager().beginTransaction().remove(f).commit();
-    }
 }
 

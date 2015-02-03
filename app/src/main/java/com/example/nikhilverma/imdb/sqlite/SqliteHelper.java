@@ -28,7 +28,7 @@ public class SqliteHelper extends SQLiteOpenHelper {
             COLUMN_TITLE + " TEXT, " +
             COLUMN_IMAGE_URL + " TEXT, " +
             COLUMN_RATING + " FLOAT,  " +
-            COLUMN_YEAR +" NUMERIC "+ ")";
+            COLUMN_YEAR +" TEXT "+ ")";
 
     public SqliteHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

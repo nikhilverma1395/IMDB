@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:elevation="30dp"
+    android:id="@+id/main_rel"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="@dimen/list_row_height">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:layout_height="@dimen/list_row_height"
+        android:id="@+id/search_list_image" />
+
+    <TextView
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:id="@+id/rating"
+        android:layout_alignBottom="@id/search_list_image" />
+
+    <TextView
+        android:textColor="@android:color/secondary_text_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Year"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:id="@+id/year_search"
+        android:layout_alignTop="@+id/rating"
+        android:layout_toRightOf="@+id/rating"
+        android:layout_toEndOf="@+id/rating" />
+
+    <TextView
+        android:background="#ff3b5999"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:padding="4dp"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/year_search"
+        android:id="@+id/title" />
+
+    <com.gc.materialdesign.views.ProgressBarCircularIndeterminate
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/progressBar_list_row"
+        android:layout_margin="20dp"
+        android:background="#f4172bff"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_margin="4dp"
+        android:focusable="false"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_delete_grey600_24dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageButton_delete"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
+
+
+</RelativeLayout>

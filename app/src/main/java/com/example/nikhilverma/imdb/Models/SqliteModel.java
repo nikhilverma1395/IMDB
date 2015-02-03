@@ -7,13 +7,13 @@ public class SqliteModel {
     private float ID;
     private String TITLE;
     private String IMAGE_URL;
-    private int YEAR;
+    private String YEAR;
 
-    public int getYEAR() {
+    public String getYEAR() {
         return YEAR;
     }
 
-    public void setYEAR(int YEAR) {
+    public void setYEAR(String YEAR) {
         this.YEAR = YEAR;
     }
 

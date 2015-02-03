@@ -21,8 +21,8 @@ public class Http {
         try {
             URL url = new URL(uri);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
-            con.setConnectTimeout(15000);
-            con.setReadTimeout(15000);
+            con.setConnectTimeout(35000);
+            con.setReadTimeout(35000);
             StringBuilder sb = new StringBuilder();
             reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
 

@@ -59,13 +59,13 @@ public class image_frag extends Fragment {
             e.printStackTrace();
         }
         Bitmap tempbg = BitmapFactory.decodeResource(getResources(), android.R.color.transparent);
-        Bitmap final_Bitmap = new BlurBuilder(15).BlurImage(im, getActivity());
+        Bitmap final_Bitmap = new BlurBuilder(23).BlurImage(im, getActivity());
         TextView tv = (TextView) v.findViewById(R.id.full_title);
         TextView tv1 = (TextView) v.findViewById(R.id.full_rating);
         tv.setText(title);
         tv1.setText(rating);
-        Bitmap nmp = Bitmap.createScaledBitmap(final_Bitmap, 120, 120, false);
-        v.findViewById(R.id.back_bitch).setBackground(new BitmapDrawable(nmp));
+      //  Bitmap nmp = Bitmap.createScaledBitmap(final_Bitmap, 120, 120, false);
+        v.findViewById(R.id.back_bitch).setBackground(new BitmapDrawable(final_Bitmap));
         return v;
     }
 }

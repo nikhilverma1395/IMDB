@@ -2,7 +2,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="#424242"
+    android:background="#F1F8E9"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -21,25 +21,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <TextView
-        android:elevation="30dp"
-        android:padding="10dp"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:background="@android:color/holo_purple"
-        style="@style/Base.TextAppearance.AppCompat.Title"
-        android:text=" Recent Movies! Searched ! "
-        android:id="@+id/recent_tv"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/error_inlist"
-        android:layout_centerHorizontal="true" />
 
-    <com.example.nikhilverma.imdb.Views.BounceListView
-        android:layout_marginTop="5dp"
+    <ListView
+        android:background="@android:color/white"
+        android:layout_marginTop="2dp"
         android:scrollbars="none"
-        android:layout_below="@id/recent_tv"
         android:id="@+id/list"
         android:clickable="true"
         android:layout_width="fill_parent"
@@ -47,9 +33,12 @@
         android:listSelector="@android:color/transparent"
         android:cacheColorHint="@android:color/transparent"
         android:divider="@null"
-        android:dividerHeight="10dp" />
+        android:dividerHeight="2dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/error_inlist"
+        android:layout_toEndOf="@+id/error_inlist" />
 
-    <com.gc.materialdesign.views.ProgressBarCircularIndetermininate
+    <com.gc.materialdesign.views.ProgressBarCircularIndeterminate
         android:layout_width="100dp"
         android:elevation="10dp"
         android:visibility="gone"
@@ -57,5 +46,7 @@
         android:id="@+id/progressbar_search"
         android:layout_height="100dp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"></com.gc.materialdesign.views.ProgressBarCircularIndetermininate>
+        android:layout_centerHorizontal="true"></com.gc.materialdesign.views.ProgressBarCircularIndeterminate>
+
+
 </RelativeLayout>

@@ -23,29 +23,30 @@ public class BlurBuilder {
         return BlurImage(getScreenshot(view), view.getContext());
     }
 
-    public  Bitmap BlurImage(Bitmap input, Context ctx) {
-        try {
-            RenderScript rsScript = RenderScript.create(ctx);
-            Allocation alloc = Allocation.createFromBitmap(rsScript, input);
+                    public  Bitmap BlurImage(Bitmap input, Context ctx) {
+                        try {
+                            RenderScript rsScript = RenderScript.create(ctx);
+                            Allocation alloc = Allocation.createFromBitmap(rsScript, input);
 
-            ScriptIntrinsicBlur blur = ScriptIntrinsicBlur.create(rsScript, Element.U8_4(rsScript));
-            blur.setRadius(radius);
-            blur.setInput(alloc);
+                           // ScriptIntrinsicBlur blur = ScriptIntrinsicBlur.create(rsScript, Element.U8_4(rsScript));
+                            ScriptIntrinsicBlur blur = ScriptIntrinsicBlur.create(rsScript, Element.U8_4(rsScript));
+                            blur.setRadius(radius);
+                            blur.setInput(alloc);
 
-            Bitmap result = Bitmap.createBitmap(input.getWidth(), input.getHeight(), Bitmap.Config.ARGB_8888);
-            Allocation outAlloc = Allocation.createFromBitmap(rsScript, result);
+                            Bitmap result = Bitmap.createBitmap(input.getWidth(), input.getHeight(), Bitmap.Config.ARGB_8888);
+                            Allocation outAlloc = Allocation.createFromBitmap(rsScript, result);
 
-            blur.forEach(outAlloc);
-            outAlloc.copyTo(result);
+                            blur.forEach(outAlloc);
+                            outAlloc.copyTo(result);
 
-            rsScript.destroy();
-            return result;
-        } catch (Exception e) {
-            // TODO: handle exception
-            return input;
-        }
+                            rsScript.destroy();
+                            return result;
+                        } catch (Exception e) {
+                            // TODO: handle exception
+                            return input;
+                        }
 
-    }
+                    }
 
     private  Bitmap getScreenshot(View view) {
         Bitmap bmp = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);

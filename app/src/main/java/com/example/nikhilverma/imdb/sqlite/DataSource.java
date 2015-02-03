@@ -33,6 +33,12 @@ public class DataSource {
 
     }
 
+    public void deleteTitle(String name) {
+        open();
+        long fr = sqLiteDatabase.delete(SqliteHelper.TABLE_MOVIE, SqliteHelper.COLUMN_TITLE + "=" + name, null);
+        close();
+    }
+
     public void close() {
         Log.i(LOG_CAT, "Database closed");
         sqLiteOpenHelper.close();
@@ -69,7 +75,7 @@ public class DataSource {
                 Log.i(LOG_CAT, "5");
                 model.setRATING(cursor.getFloat(cursor.getColumnIndex(SqliteHelper.COLUMN_RATING)));
                 Log.i(LOG_CAT, "6");
-                model.setYEAR(cursor.getInt(cursor.getColumnIndex(SqliteHelper.COLUMN_YEAR)));
+                model.setYEAR(cursor.getString(cursor.getColumnIndex(SqliteHelper.COLUMN_YEAR)));
                 close();
             } catch (Exception e) {
                 Log.i(LOG_CAT, e.toString());
@@ -90,7 +96,7 @@ public class DataSource {
                 m.setTITLE(cursor.getString(1));
                 m.setIMAGE_URL(cursor.getString(2));
                 m.setRATING(cursor.getFloat(3));
-                m.setYEAR(cursor.getInt(4));
+                m.setYEAR(cursor.getString(4));
                 movielist.add(m);
             } while (cursor.moveToNext());
         }
@@ -108,7 +114,12 @@ public class DataSource {
         int d = cursor.getCount();
         cursor.close();
         close();
-        Log.i("Count.Sqlite.Nikhil", d + "");
         return d;
+    }
+
+    public void deleteFromId(long url_id) {
+        open();
+        long fr = sqLiteDatabase.delete(SqliteHelper.TABLE_MOVIE, SqliteHelper.COLUMN_IDs + "=" + url_id, null);
+        close();
     }
 }

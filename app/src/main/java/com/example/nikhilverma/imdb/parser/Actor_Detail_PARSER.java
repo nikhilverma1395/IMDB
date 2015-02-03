@@ -2,7 +2,7 @@ package com.example.nikhilverma.imdb.parser;
 
 import android.util.Log;
 
-import com.example.nikhilverma.imdb.Activites.MainActivity;
+import com.example.nikhilverma.imdb.Activites.MyTask;
 import com.example.nikhilverma.imdb.Models.ActorDetailModel;
 import com.example.nikhilverma.imdb.Models.Trailor_Model;
 
@@ -17,17 +17,16 @@ import java.util.List;
  * Created by Nikhil Verma on 04-01-2015.
  */
 public class Actor_Detail_PARSER {
+    public static String title = "",
+            videoURL = "";
+    public static List<Trailor_Model> list_te = new ArrayList<Trailor_Model>();
     static String[] filming;
-   public static String title = "",
-     videoURL = "";
-    public  static List<Trailor_Model> list_te = new ArrayList<Trailor_Model>();
-
 
     public static List<ActorDetailModel> parseFeednew(String content) {
         final String image_extra = "_LX32_CR13,0,0,0_AL_.jpg";
         List<ActorDetailModel> list = new ArrayList<ActorDetailModel>();
         List<Trailor_Model> list_t = new ArrayList<Trailor_Model>();
-       // list = null;
+        // list = null;
         //list_t = null;
         if (content.length() < 50)
             return null;
@@ -61,16 +60,17 @@ public class Actor_Detail_PARSER {
                 a.setUrlProfile(oo.getString("urlProfile"));
                 list.add(a);
             }
-            JSONArray filmingLocations = maino.getJSONArray("filmingLocations");
-            filming = new String[filmingLocations.length()];
-            Log.e("MainActivity.mo.setFilmingLoc", filmingLocations.length() + "");
-
-            for (int i = 0; i < filmingLocations.length(); i++)
-                filming[i] = filmingLocations.getString(i);
             try {
-                MainActivity.mo.setFilmingLoc(filming);
+                JSONArray filmingLocations = maino.getJSONArray("filmingLocations");
+                filming = new String[filmingLocations.length()];
+                Log.e("MainActivity.mo.setFilmingLoc", filmingLocations.length() + "");
+
+                for (int i = 0; i < filmingLocations.length(); i++)
+                    filming[i] = filmingLocations.getString(i);
+                MyTask.mo.setFilmingLoc(filming);
             } catch (Exception e) {
                 Log.e("MainActivity.mo.setFilmingLoc", e.toString());
+                MyTask.mo.setFilmingLoc(new String[]{"N/A"});
             }
             JSONObject trailor = maino.getJSONObject("trailer");
             title = trailor.getString("title");

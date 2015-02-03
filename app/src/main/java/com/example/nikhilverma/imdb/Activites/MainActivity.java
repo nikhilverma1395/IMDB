@@ -14,18 +14,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nikhilverma.imdb.Fragments.FirstRunDialog;
 import com.example.nikhilverma.imdb.Fragments.Rate_App_Dialog;
-import com.example.nikhilverma.imdb.Models.ActorDetailModel;
-import com.example.nikhilverma.imdb.Models.Model;
 import com.example.nikhilverma.imdb.Models.SqliteModel;
 import com.example.nikhilverma.imdb.R;
 import com.gc.materialdesign.views.ButtonFloat;
 import com.gc.materialdesign.views.ButtonRectangle;
-import com.gc.materialdesign.views.ProgressBarCircularIndetermininate;
+import com.gc.materialdesign.views.ProgressBarCircularIndeterminate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,17 +33,11 @@ import de.psdev.licensesdialog.LicensesDialogFragment;
 
 public class MainActivity extends ActionBarActivity {
 
-    TextView output;
-    static List<ActorDetailModel> list = new ArrayList<ActorDetailModel>();
-    static List<SqliteModel> model_dick;
     public static int Constant_Shit;
+    public static Context context = null;
+    static List<SqliteModel> model_dick;
     static boolean MYAPIWORKING;
     static FragmentManager fragmentManager;
-
-    public static List<ActorDetailModel> getList() {
-        return list;
-    }
-
     static String GOOGLE = "https://www.google.co.in/#q=";
     static String GOOG = "";
     static String myapifilms1 = "http://www.myapifilms.com/imdb?title=";
@@ -54,31 +47,48 @@ public class MainActivity extends ActionBarActivity {
     static String myapifilms5 = "&lang=en-us&actors=S&biography=0&trailer=1&uniqueName=0&filmography" +
             "=0&bornDied=0&starSign=0&actorActress=0&actorTrivia=0&movieTrivia=0&awards=0";
     static String finall = null;
-    static String newJson = "";
     static ButtonRectangle buttonclick;
-    public static Context context = null;
-    static ProgressBarCircularIndetermininate pb;
+    static ProgressBarCircularIndeterminate pb;
     static ButtonFloat b;
-    String title = "", yes = "";
     static EditText met, year;
-    static ButtonRectangle bt;
-    public static Model mo;
+    static ButtonRectangle bt, buttonclick_reset;
+    int anim_time;
+    boolean nope = false;
+    TextView output;
+    float trans_noi;
+    String title = "", yes = "";
+    TextView tv;
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        overridePendingTransition(R.anim.activity_open_scale, R.anim.activity_close_translate);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        overridePendingTransition(R.anim.activity_open_translate, R.anim.activity_close_scale);
         setContentView(R.layout.start_enter);
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
-
+        tv = (TextView) findViewById(R.id.no_internet_text);
+        trans_noi = tv.getTranslationY();
+        tv.setVisibility(View.GONE);
+        final ImageView iv = (ImageView) findViewById(R.id.imdb_image);
+        float yTr = iv.getTranslationY();
+        float xTr = iv.getTranslationY();
+        iv.setTranslationY(1920);
+        iv.setTranslationX(1080);
+        anim_time = getResources().getInteger(android.R.integer.config_longAnimTime);
+        iv.animate().translationY(yTr).translationX(xTr).setDuration(anim_time).setListener(null);
         b = (ButtonFloat) findViewById(R.id.buttonflat);
         buttonclick = (ButtonRectangle) findViewById(R.id.buttonclick);
-
+        buttonclick_reset = (ButtonRectangle) findViewById(R.id.buttonclick_reset);
 
         met = (EditText) findViewById(R.id.name);
         year = (EditText) findViewById(R.id.year);
-        pb = (ProgressBarCircularIndetermininate) findViewById(R.id.progressBar1);
+        pb = (ProgressBarCircularIndeterminate) findViewById(R.id.progressBar1);
         pb.setVisibility(View.GONE);
         bt = (ButtonRectangle) findViewById(R.id.search_button);
         met.setOnClickListener(new View.OnClickListener() {
@@ -149,6 +159,7 @@ public class MainActivity extends ActionBarActivity {
 
     public void startFrag(View v) {
         if (isOnline()) {
+            tv.setVisibility(View.GONE);
             Constant_Shit++;
             title = met.getText().toString();
             yes = year.getText().toString();
@@ -173,22 +184,26 @@ public class MainActivity extends ActionBarActivity {
             GOOG = GOOGLE + GOOG;
             String lik = "http://www.omdbapi.com/?t=" + d + "&y=" + yes + "&plot=full&r=json";
             MYAPI = myapifilms1 + d + myapifilms3 + yes + myapifilms5;
-            Log.d("Final Link", d + "/n" + MYAPI + "\n" + GOOG);
+            Log.d("Final Link", lik + "\n" + MYAPI + "\n" + GOOG);
             requestData(lik, MYAPI);
             Log.e("1", "requested data");
-
-
-//            Toast.makeText(getApplicationContext(), "Im here", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, "Network isn't available", Toast.LENGTH_LONG).show();
+            if (!nope) {
+                tv.setTranslationY(0);
+                nope = true;
+                Log.d("Animate", "sexO");
+                tv.setVisibility(View.VISIBLE);
+                float transX = tv.getTranslationX();
+                tv.animate().translationY(trans_noi)
+                        .setDuration(1000).setListener(null);
+            }
         }
-
     }
 
 
     private void requestData(String uri, String MYAPI) {
         Log.d("2", "executed data");
-        new MyTask(true).execute(uri, MYAPI);
+        new MyTask(true, this).execute(uri, MYAPI);
     }
 
     @Override

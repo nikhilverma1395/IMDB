@@ -11,12 +11,12 @@
         android:layout_height="match_parent">
 
         <com.davemorrissey.labs.subscaleview.ScaleImageView
-            android:layout_width="320dp"
+            android:layout_width="@dimen/main_img_width_zoom"
             android:layout_marginTop="30dp"
             android:layout_gravity="center"
             android:id="@+id/image_frag"
             android:scaleType="fitXY"
-            android:layout_height="480dp" />
+            android:layout_height="@dimen/main_img_height_zoom" />
 
         <LinearLayout
             android:layout_margin="10dp"
