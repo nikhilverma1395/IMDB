@@ -1,17 +1,13 @@
-apply plugin: 'com.android.library'
-apply plugin: 'android-maven'
-apply from : "$project.rootDir/publishing.gradle"
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "21.1.0"
+    buildToolsVersion "21.1.2"
 
     defaultConfig {
         applicationId "me.tatarka.support.job"
         minSdkVersion 10
         targetSdkVersion 21
-        versionCode 1
-        versionName "1.0"
     }
     buildTypes {
         release {
@@ -23,4 +19,5 @@ android {
 
 dependencies {
     compile 'com.android.support:support-v4:21.0.0'
+    compile 'me.tatarka.support:jobscheduler:0.1.1'
 }

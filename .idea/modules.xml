@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/crossfade/crossfade.iml" filepath="$PROJECT_DIR$/crossfade/crossfade.iml" />
       <module fileurl="file://$PROJECT_DIR$/grid/grid.iml" filepath="$PROJECT_DIR$/grid/grid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jobscheduler/jobscheduler.iml" filepath="$PROJECT_DIR$/jobscheduler/jobscheduler.iml" />
       <module fileurl="file://$PROJECT_DIR$/listViewRemovalAnimation/listViewRemovalAnimation.iml" filepath="$PROJECT_DIR$/listViewRemovalAnimation/listViewRemovalAnimation.iml" />
       <module fileurl="file://$PROJECT_DIR$/materialDesign/materialDesign.iml" filepath="$PROJECT_DIR$/materialDesign/materialDesign.iml" />
       <module fileurl="file://$PROJECT_DIR$/material_edit_text/material_edit_text.iml" filepath="$PROJECT_DIR$/material_edit_text/material_edit_text.iml" />
