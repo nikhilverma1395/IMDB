@@ -4,7 +4,7 @@
     android:id="@+id/contain_er"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">-->
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <com.gc.materialdesign.views.ScrollView
         android:scrollbars="none"
@@ -17,7 +17,18 @@
             android:background="@android:color/white"
             android:layout_height="match_parent">
 
+            <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:background="?attr/colorPrimary"
+                android:id="@+id/toolbarer"
+                android:layout_width="match_parent"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:minHeight="?attr/actionBarSize"
+                android:layout_height="wrap_content" />
+
             <ImageView
+                android:layout_below="@id/toolbarer"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/main_img_height"
                 android:id="@+id/pid1"
@@ -29,6 +40,7 @@
                 android:id="@+id/progressBar_main_content"
                 android:layout_margin="15dp"
                 android:background="@color/accent_material_light"
+                android:layout_alignTop="@id/pid1"
                 android:layout_alignRight="@id/pid1"
                 android:layout_height="37dp" />
 

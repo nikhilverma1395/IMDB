@@ -6,28 +6,21 @@
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="C:\Program Files\Android\Android Studio\gradle\gradle-2.2.1" />
+        <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Fab_Google" />
             <option value="$PROJECT_DIR$/Subsampling_IV" />
             <option value="$PROJECT_DIR$/act" />
-            <option value="$PROJECT_DIR$/alarm" />
-            <option value="$PROJECT_DIR$/androidAlarmManagerDemo" />
-            <option value="$PROJECT_DIR$/anim" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/crossfade" />
-            <option value="$PROJECT_DIR$/grid" />
-            <option value="$PROJECT_DIR$/jobscheduler" />
-            <option value="$PROJECT_DIR$/listViewRemovalAnimation" />
+            <option value="$PROJECT_DIR$/decode" />
             <option value="$PROJECT_DIR$/materialDesign" />
             <option value="$PROJECT_DIR$/material_edit_text" />
+            <option value="$PROJECT_DIR$/myapplication" />
             <option value="$PROJECT_DIR$/vlog" />
-            <option value="$PROJECT_DIR$/volsbb" />
           </set>
         </option>
       </GradleProjectSettings>
     </option>
   </component>
 </project>
-

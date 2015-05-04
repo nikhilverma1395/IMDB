@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         //applicationId "com.gc.materialdesign"
-        minSdkVersion 14
+        minSdkVersion 8
         targetSdkVersion 21
     }
 

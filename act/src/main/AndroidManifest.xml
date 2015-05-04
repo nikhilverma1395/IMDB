@@ -13,7 +13,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.nikhilverma.act"
+    package="com.nikhilvermavit.nikhilverma.act"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -27,7 +27,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.nikhilverma.act.ActivityAnimations"
+            android:name="com.nikhilvermavit.nikhilverma.act.ActivityAnimations"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +36,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.nikhilverma.act.PictureDetailsActivity"
+            android:name="com.nikhilvermavit.nikhilverma.act.PictureDetailsActivity"
             android:label="@string/subactivity_name"
             android:theme="@style/Transparent" >
         </activity>

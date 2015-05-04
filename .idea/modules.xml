@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Fab_Google/Fab_Google.iml" filepath="$PROJECT_DIR$/Fab_Google/Fab_Google.iml" />
       <module fileurl="file://$PROJECT_DIR$/IMDB.iml" filepath="$PROJECT_DIR$/IMDB.iml" />
       <module fileurl="file://$PROJECT_DIR$/Subsampling_IV/Subsampling_IV.iml" filepath="$PROJECT_DIR$/Subsampling_IV/Subsampling_IV.iml" />
       <module fileurl="file://$PROJECT_DIR$/act/act.iml" filepath="$PROJECT_DIR$/act/act.iml" />
-      <module fileurl="file://$PROJECT_DIR$/alarm/alarm.iml" filepath="$PROJECT_DIR$/alarm/alarm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/androidAlarmManagerDemo/androidAlarmManagerDemo.iml" filepath="$PROJECT_DIR$/androidAlarmManagerDemo/androidAlarmManagerDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/anim/anim.iml" filepath="$PROJECT_DIR$/anim/anim.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/crossfade/crossfade.iml" filepath="$PROJECT_DIR$/crossfade/crossfade.iml" />
-      <module fileurl="file://$PROJECT_DIR$/grid/grid.iml" filepath="$PROJECT_DIR$/grid/grid.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jobscheduler/jobscheduler.iml" filepath="$PROJECT_DIR$/jobscheduler/jobscheduler.iml" />
-      <module fileurl="file://$PROJECT_DIR$/listViewRemovalAnimation/listViewRemovalAnimation.iml" filepath="$PROJECT_DIR$/listViewRemovalAnimation/listViewRemovalAnimation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/decode/decode.iml" filepath="$PROJECT_DIR$/decode/decode.iml" />
       <module fileurl="file://$PROJECT_DIR$/materialDesign/materialDesign.iml" filepath="$PROJECT_DIR$/materialDesign/materialDesign.iml" />
       <module fileurl="file://$PROJECT_DIR$/material_edit_text/material_edit_text.iml" filepath="$PROJECT_DIR$/material_edit_text/material_edit_text.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myapplication/myapplication.iml" filepath="$PROJECT_DIR$/myapplication/myapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/vlog/vlog.iml" filepath="$PROJECT_DIR$/vlog/vlog.iml" />
-      <module fileurl="file://$PROJECT_DIR$/volsbb/volsbb.iml" filepath="$PROJECT_DIR$/volsbb/volsbb.iml" />
     </modules>
   </component>
 </project>
-

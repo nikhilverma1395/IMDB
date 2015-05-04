@@ -1,10 +1,24 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="wifi_icon_height">200dp</dimen>
-    <dimen name="wifi_icon_width">200dp</dimen>
-    <dimen name="in_out_textSize">22sp</dimen>
-    <dimen name="button_size">60dp</dimen>
-
+    <dimen name="textSize">20sp</dimen>
+    <dimen name="padding_image_button">15dp</dimen>
+    <dimen name="margin_top_image">15dp</dimen>
+    <dimen name="image_w">200dp</dimen>
+    <dimen name="my_txt_size">22sp</dimen>
+    <dimen name="logo_">28sp</dimen>
+    <dimen name="dialog_size">340dp</dimen>
+    <dimen name="info_text_size">14sp</dimen>
+    <dimen name="pro">80dp</dimen>
+    <dimen name="card_image">50dp</dimen>
+    <dimen name="margin_card_top">10dp</dimen>
+    <dimen name="margin_card_image">10dp</dimen>
+    <dimen name="margin_turn">70dp</dimen>
+    <dimen name="elevation_low">9dp</dimen>
+    <dimen name="elevation_high">12dp</dimen>
+    <dimen name="margin_card_left_right">20dp</dimen>
+    <dimen name="mbottom">70dp</dimen>
+    <dimen name="list_width">110dp</dimen>
+    <dimen name="title_font">16sp</dimen>
+    <dimen name="small_texts">15sp</dimen>
+    <dimen name="title_font_head">19sp</dimen>
 </resources>

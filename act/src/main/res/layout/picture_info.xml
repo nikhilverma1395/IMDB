@@ -18,7 +18,7 @@
     android:id="@+id/topLevelLayout">
     
     <view
-        class="com.example.android.activityanim.ShadowLayout"
+        class="com.nikhilvermavit.android.activityanim.ShadowLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/shadowLayout"

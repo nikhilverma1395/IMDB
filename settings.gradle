@@ -1,3 +1,2 @@
-include ':app', ':material_edit_text', ':materialDesign', ':act', ':grid', ':Subsampling_IV', ':crossfade', ':Fab_Google', ':anim', ':vlog', ':volsbb', ':alarm', ':jobscheduler'
-include ':listViewRemovalAnimation'
-include ':androidAlarmManagerDemo'
+include ':app', ':material_edit_text', ':materialDesign', ':act', ':Subsampling_IV',':vlog', ':myapplication', ':decode'
+

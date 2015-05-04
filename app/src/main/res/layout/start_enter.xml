@@ -35,12 +35,12 @@
             android:layout_height="match_parent">
 
             <com.gc.materialdesign.views.ButtonRectangle
-                android:layout_width="160dp"
+                android:layout_width="wrap_content"
                 android:background="@color/primary"
                 android:visibility="visible"
                 android:id="@+id/search_button"
                 android:onClick="makemylist"
-                android:text="Sqlite"
+                android:text="Recently Searched Movies"
                 android:layout_height="50dp" />
 
             <LinearLayout
@@ -139,6 +139,7 @@
                 android:visibility="gone"
                 android:background="#1E88E5"
                 android:layout_gravity="center_horizontal" />
+
 
             <com.gc.materialdesign.views.ButtonFloat
                 android:layout_width="80dp"

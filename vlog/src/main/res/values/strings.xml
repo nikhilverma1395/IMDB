@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ProntoNetworks Login</string>
+    <string name="app_name">Volsbb Login</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Reset Credentials</string>
-<string name="ssdsd">Crawler4j is an open source Java crawler which provides a simple interface for crawling the Web. You can setup a multi-threaded web crawler in 5 minutes!
-Crawler4j is an open source Java crawler which provides a simple interface for crawling the Web. You can setup a multi-threaded web crawler in 5 minutes!
-Crawler4j is an open source Java crawler which provides a simple interface for crawling the Web. You can setup a multi-threaded web crawler in 5 minutes!</string>
+    <string name="i1">This App is made for students of Vellore Institute Of Technology , but it will work with any ProntoNetworks host.</string>
+    <string name="new_st">
+        - New SlidingTab Layout \n
+        - Multiple Accounts  \n
+        - Timer For Auto-Login \n
+        - Stable and Better UI
+    </string>
+    <string name="i3">If your Wifi is Turned Off , app will show a button in bottom  , click that to turn wifi On and
+        it will try to  connect
+        to VOLSBB automatically .(If Mobile Data is turned On , it will turn it off mobile-data automatically in the
+        way of turning wifi on )  Sometimes it doesn\'t connect to VOLSBB in
+        the  first attempt ,so try again , or manually connect from settings.
+    </string>
+    <string name="i4">Thanks For Reading .</string>
+    <string name="i2">Enter The details at the after you dismiss this dialog .
+    You can have multiple accounts and just tap the account you want to use (A green tick will appear on that Account)\n\nOnce you Log-In you can View your Usage also . When you log-in only then you can see option to see your usage as Session Id changes every time you Login .
+\n\nThere is also a feature to set Auto-Timer Login in app , First select the frequency of Auto-Login and then when to cancel this Timer .
+        You can also cancel all timers directly by clicking Cancel Instantly .
+    </string>
+
+    <string name="dad">Designer &amp; Developer</string>
 </resources>
+

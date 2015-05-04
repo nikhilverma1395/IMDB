@@ -1,0 +1,13 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="textSize">40sp</dimen>
+    <dimen name="padding_image_button">50dp</dimen>
+    <dimen name="margin_top_image">50dp</dimen>
+    <dimen name="image_w">300dp</dimen>
+    <dimen name="my_txt_size">35sp</dimen>
+    <dimen name="logo_">44sp</dimen>
+    <dimen name="margin_turn">560dp</dimen>
+    <dimen name="list_width">180dp</dimen>
+    <dimen name="pro">130dp</dimen>
+    <dimen name="mbottom">80dp</dimen>
+</resources>

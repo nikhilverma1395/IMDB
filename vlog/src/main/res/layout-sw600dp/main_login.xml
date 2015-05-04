@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gc.materialdesign.views.ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff6a34"
+    android:fillViewport="true">
+
+
+    <FrameLayout
+
+        android:id="@+id/contaner_er"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--Hidden Layout For Status  -->
+            <LinearLayout
+                android:id="@+id/success_logged_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff5968ff"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="6">
+
+
+                <TextView
+                    android:id="@+id/successer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="5"
+                    android:padding="8dp"
+                    android:text="Logged In Successfully"
+                    android:textSize="20sp"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/dismiss_success"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_cancel_black_36dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/wifi_icon"
+                android:layout_width="@dimen/image_w"
+                android:layout_height="@dimen/image_w"
+                android:layout_below="@id/success_logged_in"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/margin_top_image"
+                android:layout_marginTop="@dimen/margin_top_image"
+                android:elevation="20dp"
+                android:src="@drawable/wifi_icm" />
+
+            <com.gc.materialdesign.views.ProgressBarCircularIndeterminate
+                android:id="@+id/progressDeterminate"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_below="@id/wifi_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:elevation="50dp" />
+
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/login_b"
+                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progressDeterminate"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:elevation="5dp"
+                android:text="Log In" />
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/logout_b"
+                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_b"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:elevation="5dp"
+                android:padding="10dp"
+                android:text="Log Out" />
+
+            <LinearLayout
+                android:id="@+id/usagebut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logout_b"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="25dp"
+                android:background="#ffb65b29"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/getusage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show Usage "></com.gc.materialdesign.views.ButtonRectangle>
+
+                <TextView
+                    android:id="@+id/usage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    android:text=""
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/wifi_not_connected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/margin_turn"
+                android:layout_marginTop="@dimen/padding_image_button"
+                android:background="#ff58d26e"
+                android:elevation="30dp"
+                android:text="Turn On Wifi and Connect"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+    </FrameLayout>
+</com.gc.materialdesign.views.ScrollView>

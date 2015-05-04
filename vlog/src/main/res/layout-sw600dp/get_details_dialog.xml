@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gc.materialdesign.views.ScrollView
+    android:layout_height="wrap_content"
+    android:background="#424242"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_margin="10dp"
+            android:text="Enter Your Credentials : "
+            android:textColor="#ff2a4ef4"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/pass_no_match"
+            android:visibility="gone"
+            android:padding="5dp"
+            android:textSize="18sp"
+            android:background="#8ff71b2c"
+            android:textColor="#ffffff"
+            android:text="Passwords Do Not Match !!"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:layout_margin="10dp"
+            android:textColor="@color/accent"
+            android:text="Edit the below field only if you are\n are not a student at Vit ."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="15dp"
+            android:weightSum="4"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:text="VOLSBB"
+                android:background="#fff6fcff"
+                app:baseColor="#ff89b5ff"
+                app:primaryColor="?colorAccent"
+                android:id="@+id/wifi_network_name"
+                android:textSize="22sp"
+                app:singleLineEllipsis="true"
+                android:layout_weight="1"
+                android:layout_height="0dp" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:hint="Username"
+                app:floatingLabel="highlight"
+                android:background="#fff6fcff"
+                app:baseColor="#ff76ffb6"
+                app:primaryColor="?colorAccent"
+                app:singleLineEllipsis="true"
+                android:id="@+id/uname_req"
+                android:textSize="22sp"
+                android:layout_weight="1"
+                android:layout_height="0dp" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                app:floatingLabel="highlight"
+                app:maxCharacters="30"
+                android:background="#fff6fcff"
+                app:baseColor="#ffc1afbc"
+                app:primaryColor="?colorAccent"
+                app:singleLineEllipsis="true"
+
+                android:layout_width="match_parent"
+                android:textSize="22sp"
+                android:inputType="textPassword"
+                android:id="@+id/pass_reg"
+                android:hint="Password"
+                android:layout_weight="1"
+                android:layout_height="0dp" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                app:floatingLabel="highlight"
+                android:background="#fff6fcff"
+                app:baseColor="#fff7d4ff"
+                app:maxCharacters="30"
+                app:primaryColor="?colorAccent"
+                app:singleLineEllipsis="true"
+                android:textSize="22sp"
+                android:inputType="textPassword"
+                android:hint="Enter Your Password Again"
+                android:id="@+id/pass_confirm_reg"
+                android:layout_weight="1"
+                android:layout_height="0dp" />
+
+
+        </LinearLayout>
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:layout_width="160dp"
+            android:text="Dismiss"
+            android:gravity="center"
+            android:background="#ffff7525"
+            android:id="@+id/dismiss_reg"
+            android:layout_height="60dp" />
+    </LinearLayout>
+</com.gc.materialdesign.views.ScrollView>
