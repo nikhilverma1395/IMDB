@@ -1,7 +1,7 @@
 Volsbb-Login
 ====
 This repo has the code for:
-`'https://play.google.com/store/apps/details?id=com.nikhilvermavit.vlog`
+`https://play.google.com/store/apps/details?id=com.nikhilvermavit.vlog`
 
 I wrote this app in 2015 for our college Wifi Auto Login 
 and for handling multiple accounts.
