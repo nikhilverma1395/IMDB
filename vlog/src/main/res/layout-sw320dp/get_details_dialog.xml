@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/windowBack"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/enter_cred_head"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="Enter Your Credentials : "
+            android:textColor="#ff2a4ef4"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/pass_no_match"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#8ff71b2c"
+            android:padding="5dp"
+            android:text="Passwords Do Not Match !!"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/studVit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="Edit the below field as per your Pronto Host"
+            android:textColor="@color/highlighted_text_material_light" />
+
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="14">
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/wifi_network_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:background="#fff6fcff"
+                android:hint="Network Name"
+                android:text="VIT2.4G"
+                android:textSize="16sp"
+                 />
+
+            <!--app:baseColor="#ff89b5ff"-->
+            <!--app:floatingLabel="highlight"-->
+            <!--app:primaryColor="?colorAccent"-->
+            <!--app:singleLineEllipsis="true"-->
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/uname_req"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:background="#fff6fcff"
+                android:hint="Username"
+                android:textSize="16sp"
+             />
+            <!--app:baseColor="#ff76ffb6"-->
+            <!--app:floatingLabel="highlight"-->
+            <!--app:primaryColor="?colorAccent"-->
+            <!--app:singleLineEllipsis="true"-->
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/pass_reg"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:background="#fff6fcff"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textSize="16sp"
+                />
+            <!--app:baseColor="#ffc1afbc"-->
+            <!--app:floatingLabel="highlight"-->
+            <!--app:primaryColor="?colorAccent"-->
+            <!--app:singleLineEllipsis="true"-->
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/pass_confirm_reg"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:background="#fff6fcff"
+                android:hint="Enter Your Password Again"
+                android:inputType="textPassword"
+                android:textSize="16sp"
+              />
+
+            <!--app:baseColor="#fff7d4ff"-->
+            <!--app:floatingLabel="highlight"-->
+            <!--app:primaryColor="?colorAccent"-->
+            <!--app:singleLineEllipsis="true"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/datepicketop"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:hint="Renewal date ex:23"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="13sp"
+                    android:textStyle="italic" />
+
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:scaleType="fitCenter"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@id/datepicketop"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/cal_icm" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/dismiss_reg"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+            android:layout_height="34dp"
+            android:background="#ffff7525"
+            android:gravity="center"
+            android:text="Dismiss"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

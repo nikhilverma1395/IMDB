@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.manuelpeinado.fadingactionbar:fadingactionbar-3.1.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fadingactionbar-3.1.2.aar/ab07f5ccfe989250498b496c95fbda7c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fadingactionbar-3.1.2.aar/ab07f5ccfe989250498b496c95fbda7c/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.manuelpeinado.fadingactionbar/fadingactionbar/3.1.2/63548da52a9a4461860c8fcf309f274d49501cf5/fadingactionbar-3.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

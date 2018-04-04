@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import com.nikhilvermavit.vlog.SqlModel;
 
@@ -25,25 +24,36 @@ public class DataSource {
     }
 
     public void open() {
-        Log.i(LOG_CAT, "Database opened");
         sqLiteDatabase = sqLiteOpenHelper.getWritableDatabase();
 
     }
+
+    public void Delete() {
+        open();
+        sqLiteDatabase.execSQL(" DROP TABLE " + Sqlite.TABLE_VOLSBB);
+        sqLiteDatabase.execSQL(Sqlite.TABLE_CREATE);
+        close();
+    }
+
 
     public List<SqlModel> getAllCredentials() {
         List<SqlModel> list = new ArrayList<>();
         String Query = "SELECT  * FROM " + Sqlite.TABLE_VOLSBB;
         open();
         Cursor cursor = sqLiteDatabase.rawQuery(Query, null);
-        if (cursor.moveToFirst()) {
-            do {
+        try {
+            while (cursor.moveToNext()) {
                 SqlModel m = new SqlModel();
                 m.setId(Integer.parseInt(cursor.getString(0)));
                 m.setUsername(cursor.getString(1));
                 m.setPassword(cursor.getString(2));
+                m.setRndate(cursor.getString(3));
                 list.add(m);
-            } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        cursor.close();
         close();
         try {
             if (list.size() == 0) {
@@ -77,6 +87,7 @@ public class DataSource {
         ContentValues contentValues = new ContentValues();
         contentValues.put(Sqlite.COLUMN_USERNAME, model.getUsername());
         contentValues.put(Sqlite.COLUMN_PASSWORD, model.getPassword());
+        contentValues.put(Sqlite.COLUMN_RENEW_DATE, model.getRndate());
         long id = sqLiteDatabase.insert(Sqlite.TABLE_VOLSBB, null, contentValues);
         model.setId(id);
         close();
@@ -84,7 +95,6 @@ public class DataSource {
 
 
     public void close() {
-        Log.i(LOG_CAT, "Database closed");
         sqLiteOpenHelper.close();
     }
 

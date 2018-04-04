@@ -2,22 +2,20 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">#ffff7559</item>
-        <item name="colorPrimaryDark">#ffff7559</item>
-        <item name="colorAccent">#ffff6d5e</item>
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimary">#607D8B</item>
+        <item name="colorPrimaryDark">#455A64</item>
+        <item name="android:textColorPrimary">#fff</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:windowBackground">@color/windowBack</item>
+        <item name="android:colorBackground">@color/windowBack</item>
+        <item name="colorAccent">#673AB7</item>
     </style>
+    <color name="accent">#673AB7</color>
+    <color name="windowBack">#263238</color>
 
     <style name="custom_theme" parent="Theme.AppCompat.Dialog">
         <item name="android:textColor">#FF00DFFF</item>
     </style>
-
-    <color name="primary">#00BCD4</color>
-    <color name="primary_dark">#0097A7</color>
-    <color name="accent">#FFEB3B</color>
-    <color name="accent_translucent">#80FFEB3B</color>
-    <color name="accent_bright">#FFF493</color>
 
     <style name="CardViewStyle.Light" parent="CardView.Light">
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
@@ -30,9 +28,7 @@
     <style name="fabstyle">
         <item name="android:layout_margin">36dp</item>
         <item name="android:background">@drawable/fab_background</item>
-        <item name="android:src">@drawable/ic_add_black</item>
-        <item name="android:outlineProvider">background</item>
-        <item name="android:stateListAnimator">@anim/fab</item>
+        <item name="android:src">@drawable/ic_add_white_24dp</item>
     </style>
 
     <style name="DialogAnimation">

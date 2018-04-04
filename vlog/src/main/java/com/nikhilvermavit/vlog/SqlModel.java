@@ -7,12 +7,21 @@ public class SqlModel {
     private String username;
     private long id;
     private String password;
+    private String rndate="Hey";
+
+    public String getRndate() {
+        return rndate;
+    }
+
+    public void setRndate(String rndate) {
+        this.rndate = rndate;
+    }
 
     public SqlModel() {
     }
 
-    public SqlModel(String username, String password) {
-
+    public SqlModel(String username, String password, String rd) {
+        rndate = rd;
         this.username = username;
         this.password = password;
     }

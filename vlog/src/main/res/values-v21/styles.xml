@@ -2,18 +2,20 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">#ffff7559</item>
-        <item name="colorPrimaryDark">#ffff7559</item>
-        <item name="android:statusBarColor">#ff376f51</item>
-        <item name="android:navigationBarColor">#ff4dbe7e</item>
-        <item name="colorAccent">#ffff6d5e</item>
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimary">#607D8B</item>
+        <item name="colorPrimaryDark">#455A64</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textColorPrimary">#fff</item>
+        <item name="android:windowBackground">@color/windowBack</item>
+        <item name="android:colorBackground">@color/windowBack</item>
+        <item name="colorAccent">#673AB7</item>
     </style>
 
+    <color name="windowBack">#263238</color>
+
     <style name="custom_theme" parent="Theme.AppCompat.Dialog">
-        <item name="android:textColor">#FF00DFFF</item>
-1    </style>
+        <item name="android:textColor">#fff</item>
+    </style>
 
     <style name="DialogAnimation">
         <item name="android:windowEnterAnimation">@anim/push_left_in</item>
@@ -23,6 +25,14 @@
     <style name="rateanim">
         <item name="android:windowEnterAnimation">@anim/fadein</item>
         <item name="android:windowExitAnimation">@anim/fadeout</item>
+    </style>
+
+    <style name="fabstyle">
+        <item name="android:layout_margin">36dp</item>
+        <item name="android:background">@drawable/fab_background</item>
+        <item name="android:src">@drawable/ic_add_white_24dp</item>
+        <item name="android:outlineProvider">background</item>
+        <item name="android:stateListAnimator">@anim/fab</item>
     </style>
 
     <style name="firstd">

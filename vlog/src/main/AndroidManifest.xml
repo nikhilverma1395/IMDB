@@ -3,13 +3,16 @@
     package="com.nikhilvermavit.vlog">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--For Enabling/Dis Mobile Data-->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!--Access Wifi/network BroadcastReceiver-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <supports-screens
         android:anyDensity="true"
@@ -20,15 +23,14 @@
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
-        android:icon="@drawable/myicon"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
 
         <activity
             android:name=".TabActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -36,12 +38,18 @@
         </activity>
 
         <receiver android:name=".Services.LoginWhenConnected">
-            <intent-filter android:priority="100">
+            <intent-filter android:priority="999">
                 <action android:name="android.net.wifi.STATE_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.supplicant.CONNECTION_CHANGE" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".Services.StartBootService">
-            <intent-filter>
+        <receiver
+            android:name=".Services.StartBootService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="998">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
                 //For Htc Devices
@@ -49,6 +57,9 @@
         </receiver>
         <receiver android:name=".Services.cancelrec" />
         <receiver android:name=".Services.receiver" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="481425e19ec131892fc8066a735886c57a7a769b" />
     </application>
 
 </manifest>

@@ -25,12 +25,9 @@ public class cancelrec extends BroadcastReceiver {
                 alarmManager1.cancel(pendingIntent);
             } catch (Exception e) {
                 e.printStackTrace();
-                Log.d("cancel", e.toString());
             }
-            Log.d("cancel", "in rec 2");
         } catch (Exception e) {
             e.printStackTrace();
-            Log.d("error_cancel", e.toString());
         }
     }
 

@@ -1,10 +1,12 @@
 <component name="libraryTable">
   <library name="licensesdialog-1.6.0">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/de.psdev.licensesdialog/licensesdialog/1.6.0/res" />
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/de.psdev.licensesdialog/licensesdialog/1.6.0/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/f75f59fe0120d3404eb05b5e5354ccac009deff4/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/f75f59fe0120d3404eb05b5e5354ccac009deff4/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.psdev.licensesdialog/licensesdialog/1.6.0/9498a5424141aeb8a194040be64051b9f1907b5f/licensesdialog-1.6.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

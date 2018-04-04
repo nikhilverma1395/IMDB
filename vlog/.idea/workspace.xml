@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7242f614-8a54-4e97-9bdb-e83aeb69961f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/assets/Raleway-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/assets/Raleway-Light.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/assets/Raleway-Regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/cal_icm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/green.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/ic_add_white_24dp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/mainw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/trash.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/user.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable-mdpi/ic_add_white_24dp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/ic_add_white_24dp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/ic_add_white_24dp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/ic_add_white_24dp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable/wifiNot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/src/main/res/mipmap-hdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/src/main/res/mipmap-hdpi/myicon_n.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/src/main/res/mipmap-mdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/src/main/res/mipmap-xhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/androidTest/java/com/nikhilvermavit/vlog/MyApplicationTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Adapter/RecyclerAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Config.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/SharedPrefs.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/view/RecyclerItemClickListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/anim-v21/ripple.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/anim/ripple.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/proguard-rules.pro" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/src/main/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/src/main/java/razor/volsbblogin/Services/Config.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/src/main/java/razor/volsbblogin/Services/Http.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/src/main/java/razor/volsbblogin/Services/LoginWhenConnected.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/src/main/java/razor/volsbblogin/Services/MainLogin.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/src/main/res/layout/main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/src/main/res/values/colors.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/src/main/res/values/strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/src/main/res/values/styles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vlogNew/vlogNew.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/appcompat_v7_21_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/appcompat_v7_21_0_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/appcompat_v7_22_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/cardview_v7_21_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/fadingactionbar_3_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/floatingactionbutton_1_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/jsoup_1_8_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/jsr305_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/library_2_4_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/licensesdialog_1_6_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/palette_v7_21_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/picasso_2_4_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/recyclerview_v7_21_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/support_annotations_21_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/support_annotations_21_0_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/support_annotations_23_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/support_v4_21_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/support_v4_21_0_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/support_v4_22_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/universal_image_loader_1_9_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/Fab_Google.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/java/com/nikhilvermavit/android/common/activities/SampleActivityBase.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/java/com/nikhilvermavit/android/common/logger/Log.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/java/com/nikhilvermavit/android/common/logger/LogFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/java/com/nikhilvermavit/android/common/logger/LogNode.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/java/com/nikhilvermavit/android/common/logger/LogView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/java/com/nikhilvermavit/android/common/logger/LogWrapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/java/com/nikhilvermavit/android/common/logger/MessageOnlyLogFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/java/com/nikhilvermavit/android/floatingactionbuttonbasic/FloatingActionButton.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/java/com/nikhilvermavit/android/floatingactionbuttonbasic/FloatingActionButtonBasicFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/java/com/nikhilvermavit/android/floatingactionbuttonbasic/MainActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/animator/fab_anim.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/drawable-hdpi/tile.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/drawable-xxhdpi/ic_add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/drawable-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/drawable-xxhdpi/ic_tick.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/drawable/fab_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/drawable/fab_icons.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/layout-w720dp/activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/layout/activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/layout/fab_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/menu/main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/values-sw600dp/template-dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/values-sw600dp/template-styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/values-v11/template-styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/values-v21/base-colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/values-v21/base-template-styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/values/base-strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/values/colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/values/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/values/fragmentview_strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/values/template-dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/src/main/res/values/template-styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/tests/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Fab_Google/tests/src/com/nikhilvermavit/android/floatingactionbuttonbasic/tests/SampleTests.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/alarm.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/app.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/proguard-rules.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/src/androidTest/java/com/javatechig/alarmservice/ApplicationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/src/main/java/com/javatechig/alarmservice/AlarmReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/src/main/java/com/javatechig/alarmservice/DeviceBootReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/src/main/java/com/javatechig/alarmservice/MyActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/src/main/res/drawable-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/src/main/res/layout/activity_my.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/src/main/res/menu/my.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/src/main/res/values-w820dp/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/src/main/res/values/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarm/src/main/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../alarmExample/alarmExample.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/androidAlarmManagerDemo.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/src/main/java/com/nikhilvermavit/MainActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/src/main/java/com/nikhilvermavit/MyAlarmService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/src/main/java/com/nikhilvermavit/MyReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/src/main/java/com/nikhilvermavit/NextActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/src/main/res/drawable-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/src/main/res/layout/activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/src/main/res/menu/main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/src/main/res/values-sw600dp/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/src/main/res/values-sw720dp-land/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/src/main/res/values/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../androidAlarmManagerDemo/src/main/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/anim.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/proguard-rules.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/androidTest/java/com/nikhilvermavit/anim/ApplicationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/java/com/nikhilvermavit/anim/MainActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/res/animator/combo.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/res/animator/fade.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/res/animator/move.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/res/animator/scale.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/res/animator/spin.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/res/drawable-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/res/layout/activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/res/menu/menu_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/res/values-w820dp/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/res/values/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../anim/src/main/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/nikhilverma/imdb/ActorDetailFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/nikhilverma/imdb/CardAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/nikhilverma/imdb/Frag_FAB.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/nikhilverma/imdb/Http.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/nikhilverma/imdb/MainActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/nikhilverma/imdb/Model.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/nikhilverma/imdb/Trailor_Model.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/nikhilverma/imdb/Trailor_else.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/nikhilverma/imdb/newModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/nikhilverma/imdb/parser.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/nikhilverma/imdb/web.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/crossfade.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/proguard-rules.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/androidTest/java/com/nikhilvermavit/crossfade/ApplicationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/main/java/com/nikhilvermavit/crossfade/MainActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/main/res/anim/slide_left.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/main/res/anim/slide_right.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/main/res/drawable-xhdpi/bratae.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/main/res/drawable-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/main/res/layout/activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/main/res/menu/activity_crossfade.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/main/res/menu/menu_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/main/res/values-w820dp/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/main/res/values/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crossfade/src/main/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/grid.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/proguard-rules.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/src/androidTest/java/com/nikhilvermavit/nikhilverma/grid/ApplicationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/src/main/java/com/nikhilvermavit/nikhilverma/grid/MainActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/src/main/res/drawable-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/src/main/res/layout/activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/src/main/res/menu/menu_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/src/main/res/values-w820dp/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/src/main/res/values/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../grid/src/main/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/jobscheduler.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/lint.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/proguard-rules.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/aidl/android/app/job/IJobCallback.aidl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/aidl/android/app/job/IJobService.aidl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/aidl/me/tatarka/support/job/IJobCallback.aidl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/aidl/me/tatarka/support/job/IJobService.aidl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/aidl/me/tatarka/support/job/JobParameters.aidl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/IJobServiceCompat.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/IoThread.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/JobSchedulerCompat.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/JobSchedulerLollipopDelegate.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/job/JobSchedulerService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/job/JobServiceCompat.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/job/JobStore.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/receivers/BootReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/receivers/ControllerPrefs.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/receivers/IdleReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/receivers/JobStatus.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/receivers/NetworkReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/receivers/PowerReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/receivers/ReceiverUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/receivers/TimeReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/util/ArraySet.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/util/ContainerHelpers.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/util/EmptyArray.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/util/FastXmlSerializer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/util/MapCollections.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/internal/util/XmlUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/job/JobInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/job/JobParameters.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/job/JobScheduler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/job/JobService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/os/PersistableBundle.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../jobscheduler/src/main/java/me/tatarka/support/os/PersistableBundleCompat.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/listViewRemovalAnimation.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/java/com/nikhilvermavit/android/listviewremovalanimation/BackgroundContainer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/java/com/nikhilvermavit/android/listviewremovalanimation/Cheeses.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/java/com/nikhilvermavit/android/listviewremovalanimation/ListViewRemovalAnimation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/java/com/nikhilvermavit/android/listviewremovalanimation/StableArrayAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/res/drawable-xhdpi/ab_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/res/drawable-xhdpi/ab_background_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/res/drawable-xhdpi/shadowed_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/res/drawable-xhdpi/tv_background_with_divider.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/res/layout/activity_list_view_deletion.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/res/layout/opaque_text_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/res/values-v11/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/res/values-v14/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../listViewRemovalAnimation/src/main/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/proguard-rules.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/prontonetworkslogin.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/src/androidTest/java/com/example/prontonetworkslogin/ApplicationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/src/main/java/com/example/prontonetworkslogin/MainActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/src/main/res/drawable-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/src/main/res/layout/activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/src/main/res/menu/menu_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/src/main/res/values-w820dp/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/src/main/res/values/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../prontonetworkslogin/src/main/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Adapter/myAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/drawable-hdpi/ic_add_black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/drawable-hdpi/ic_cancel_black_36dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/drawable-hdpi/ic_delete_grey600_24dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/drawable-hdpi/myicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/drawable-hdpi/myicon_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/drawable-hdpi/wifi_icm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/drawable-mdpi/ic_account_box_black_48dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/drawable-mdpi/myicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/drawable-mdpi/tick.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/layout-480x800/list_search.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/layout-480x800/main_login.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/layout-480x800/timers.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/layout-sw600dp/changelog.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/layout/about_me.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/layout/toolbar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/proguard-rules.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/androidTest/java/com/nikhilvermavit/vlog/ApplicationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/anim/activity_close_scale.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/anim/activity_close_translate.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/anim/activity_open_scale.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/anim/activity_open_translate.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/anim/bottom_from_top.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/anim/slide.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/anim/slide_re.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/anim/up_from_bottom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/drawable-hdpi/pron.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/drawable-hdpi/pronto_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/drawable-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/layout/activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/layout/get_details_dialog.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/layout/rateapp.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/layout/splash.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/menu/menu_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/raw/splashsound.ogg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/values-w820dp/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/values/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/values/log.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/src/main/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../volsbb/volsbb.iml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/androidTest/java/com/nikhilvermavit/vlog/ApplicationTest.java" afterPath="$PROJECT_DIR$/../vlogNew/src/androidTest/java/razor/volsbblogin/ApplicationTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/res/values-480x800/dimen.xml" afterPath="$PROJECT_DIR$/src/main/res/values-480x800/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="$PROJECT_DIR$/../.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/compiler.xml" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/../.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/encodings.xml" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/gradle.xml" afterPath="$PROJECT_DIR$/../.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/misc.xml" afterPath="$PROJECT_DIR$/../.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/modules.xml" afterPath="$PROJECT_DIR$/../.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/../.idea/scopes/scope_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/vcs.xml" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../IMDB.iml" afterPath="$PROJECT_DIR$/../IMDB.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../README.md" afterPath="$PROJECT_DIR$/../README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Subsampling_IV/Subsampling_IV.iml" afterPath="$PROJECT_DIR$/../Subsampling_IV/Subsampling_IV.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../act/.gitignore" afterPath="$PROJECT_DIR$/../act/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../act/act.iml" afterPath="$PROJECT_DIR$/../act/act.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../act/build.gradle" afterPath="$PROJECT_DIR$/../act/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../act/proguard-rules.pro" afterPath="$PROJECT_DIR$/../act/proguard-rules.pro" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../act/src/androidTest/java/com/nikhilvermavit/nikhilverma/act/ApplicationTest.java" afterPath="$PROJECT_DIR$/../act/src/androidTest/java/com/nikhilvermavit/nikhilverma/act/ApplicationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../act/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../act/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../act/src/main/java/com/nikhilvermavit/nikhilverma/act/NotifyingScrollView.java" afterPath="$PROJECT_DIR$/../act/src/main/java/com/nikhilvermavit/nikhilverma/act/NotifyingScrollView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../act/src/main/res/layout/activity_animations.xml" afterPath="$PROJECT_DIR$/../act/src/main/res/layout/activity_animations.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../act/src/main/res/layout/fragment_shot.xml" afterPath="$PROJECT_DIR$/../act/src/main/res/layout/fragment_shot.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/app.iml" afterPath="$PROJECT_DIR$/../app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/nikhilverma/imdb/Adapters/ListAdapter.java" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/nikhilverma/imdb/Adapters/ListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/java/com/nikhilvermavit/nikhilverma/imdb/Activites/MainActivity.java" afterPath="$PROJECT_DIR$/../app/src/main/java/com/nikhilvermavit/nikhilverma/imdb/Activites/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/java/com/nikhilvermavit/nikhilverma/imdb/Activites/MyTask.java" afterPath="$PROJECT_DIR$/../app/src/main/java/com/nikhilvermavit/nikhilverma/imdb/Activites/MyTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/java/com/nikhilvermavit/nikhilverma/imdb/parser/main_parser.java" afterPath="$PROJECT_DIR$/../app/src/main/java/com/nikhilvermavit/nikhilverma/imdb/parser/main_parser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/java/com/nikhilvermavit/nikhilverma/imdb/sqlite/DataSource.java" afterPath="$PROJECT_DIR$/../app/src/main/java/com/nikhilvermavit/nikhilverma/imdb/sqlite/DataSource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/res/anim/activity_close_scale.xml" afterPath="$PROJECT_DIR$/../app/src/main/res/anim/activity_close_scale.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/res/anim/activity_close_translate.xml" afterPath="$PROJECT_DIR$/../app/src/main/res/anim/activity_close_translate.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/res/anim/activity_open_scale.xml" afterPath="$PROJECT_DIR$/../app/src/main/res/anim/activity_open_scale.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/res/anim/activity_open_translate.xml" afterPath="$PROJECT_DIR$/../app/src/main/res/anim/activity_open_translate.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/res/anim/bottom_from_top.xml" afterPath="$PROJECT_DIR$/../app/src/main/res/anim/bottom_from_top.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/res/anim/slide.xml" afterPath="$PROJECT_DIR$/../app/src/main/res/anim/slide.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/res/anim/slide_re.xml" afterPath="$PROJECT_DIR$/../app/src/main/res/anim/slide_re.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/res/anim/up_from_bottom.xml" afterPath="$PROJECT_DIR$/../app/src/main/res/anim/up_from_bottom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/actor_r.xml" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/actor_r.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/all_det1.xml" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/all_det1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/list_mag.xml" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/list_mag.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../build.gradle" afterPath="$PROJECT_DIR$/../build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../decode/.gitignore" afterPath="$PROJECT_DIR$/../decode/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../decode/build.gradle" afterPath="$PROJECT_DIR$/../decode/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../decode/decode.iml" afterPath="$PROJECT_DIR$/../decode/decode.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../decode/proguard-rules.pro" afterPath="$PROJECT_DIR$/../decode/proguard-rules.pro" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../decode/src/androidTest/java/bro/decode/ApplicationTest.java" afterPath="$PROJECT_DIR$/../decode/src/androidTest/java/bro/decode/ApplicationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../decode/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../decode/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../decode/src/main/java/bro/decode/MainActivity.java" afterPath="$PROJECT_DIR$/../decode/src/main/java/bro/decode/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../decode/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/../decode/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../decode/src/main/res/menu/menu_main.xml" afterPath="$PROJECT_DIR$/../decode/src/main/res/menu/menu_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../decode/src/main/res/values-w820dp/dimens.xml" afterPath="$PROJECT_DIR$/../decode/src/main/res/values-w820dp/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../decode/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/../decode/src/main/res/values/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../decode/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/../decode/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../decode/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/../decode/src/main/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gradle.properties" afterPath="$PROJECT_DIR$/../gradle.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gradlew.bat" afterPath="$PROJECT_DIR$/../gradlew.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../import-summary.txt" afterPath="$PROJECT_DIR$/../import-summary.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/build.gradle" afterPath="$PROJECT_DIR$/../materialDesign/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/lint.xml" afterPath="$PROJECT_DIR$/../materialDesign/lint.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/materialDesign.iml" afterPath="$PROJECT_DIR$/../materialDesign/materialDesign.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/utils/Utils.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/utils/Utils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/Button.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/Button.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ButtonFlat.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ButtonFlat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ButtonFloat.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ButtonFloat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ButtonFloatSmall.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ButtonFloatSmall.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ButtonIcon.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ButtonIcon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ButtonRectangle.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ButtonRectangle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/Card.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/Card.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/CheckBox.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/CheckBox.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/CustomView.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/CustomView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/LayoutRipple.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/LayoutRipple.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ProgressBarCircularIndeterminate.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ProgressBarCircularIndeterminate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ProgressBarDetermininate.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ProgressBarDetermininate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ProgressBarIndeterminate.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ProgressBarIndeterminate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ProgressBarIndeterminateDeterminate.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ProgressBarIndeterminateDeterminate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ScrollView.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/ScrollView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/Slider.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/Slider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/Switch.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/views/Switch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/widgets/ColorSelector.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/widgets/ColorSelector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/widgets/Dialog.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/widgets/Dialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/widgets/SnackBar.java" afterPath="$PROJECT_DIR$/../materialDesign/src/main/java/com/gc/materialdesign/widgets/SnackBar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/anim/progress_indeterminate_animation.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/anim/progress_indeterminate_animation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/anim/snackbar_hide_animation.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/anim/snackbar_hide_animation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/anim/snackbar_show_animation.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/anim/snackbar_show_animation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/background_button_float.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/background_button_float.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/background_button_rectangle.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/background_button_rectangle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/background_checkbox.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/background_checkbox.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/background_checkbox_check.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/background_checkbox_check.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/background_checkbox_uncheck.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/background_checkbox_uncheck.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/background_progress.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/background_progress.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/background_switch_ball_uncheck.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/background_switch_ball_uncheck.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/background_transparent.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/background_transparent.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/shadow_down.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/shadow_down.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/shadow_right.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/drawable/shadow_right.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/layout/color_selector.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/layout/color_selector.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/layout/dialog.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/layout/dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/layout/number_indicator_spinner.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/layout/number_indicator_spinner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/layout/snackbar.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/layout/snackbar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/layout/text.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/layout/text.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/values/attributes.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/values/attributes.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/values/colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../materialDesign/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/../materialDesign/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../material_edit_text/material_edit_text.iml" afterPath="$PROJECT_DIR$/../material_edit_text/material_edit_text.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../myapplication/.gitignore" afterPath="$PROJECT_DIR$/../myapplication/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../myapplication/build.gradle" afterPath="$PROJECT_DIR$/../myapplication/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../myapplication/myapplication.iml" afterPath="$PROJECT_DIR$/../myapplication/myapplication.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../myapplication/proguard-rules.pro" afterPath="$PROJECT_DIR$/../myapplication/proguard-rules.pro" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../myapplication/src/androidTest/java/com/wedontforget/myapplication/ApplicationTest.java" afterPath="$PROJECT_DIR$/../myapplication/src/androidTest/java/com/wedontforget/myapplication/ApplicationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../myapplication/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../myapplication/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../myapplication/src/main/java/com/wedontforget/myapplication/MainActivity.java" afterPath="$PROJECT_DIR$/../myapplication/src/main/java/com/wedontforget/myapplication/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../myapplication/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/../myapplication/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../myapplication/src/main/res/menu/menu_main.xml" afterPath="$PROJECT_DIR$/../myapplication/src/main/res/menu/menu_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../myapplication/src/main/res/values-w820dp/dimens.xml" afterPath="$PROJECT_DIR$/../myapplication/src/main/res/values-w820dp/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../myapplication/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/../myapplication/src/main/res/values/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../myapplication/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/../myapplication/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../myapplication/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/../myapplication/src/main/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../settings.gradle" afterPath="$PROJECT_DIR$/../settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proguard-rules.pro" afterPath="$PROJECT_DIR$/proguard-rules.pro" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Dialog/AboutApp.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Dialog/AboutApp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Dialog/GetDetails.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Dialog/GetDetails.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Dialog/RateAPP.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Dialog/RateAPP.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Fragment/License.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Fragment/License.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Fragment/ListAccounts.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Fragment/ListAccounts.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Fragment/MainLogin.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Fragment/MainLogin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Fragment/schedule.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Fragment/schedule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Http.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Http.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Services/LoginWhenConnected.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Services/LoginWhenConnected.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Services/StartBootService.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Services/StartBootService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Services/cancelrec.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Services/cancelrec.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Services/receiver.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Services/receiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Sql/DataSource.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Sql/DataSource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Sql/Sqlite.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/Sql/Sqlite.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/SqlModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/SqlModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/TabActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/TabActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/view/CircleImageView.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/view/CircleImageView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/view/SlidingTabLayout.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/view/SlidingTabLayout.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/view/SlidingTabStrip.java" afterPath="$PROJECT_DIR$/src/main/java/com/nikhilvermavit/vlog/view/SlidingTabStrip.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/anim/activity_close_scale.xml" afterPath="$PROJECT_DIR$/src/main/res/anim/activity_close_scale.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/anim/activity_open_scale.xml" afterPath="$PROJECT_DIR$/src/main/res/anim/activity_open_scale.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/anim/fab.xml" afterPath="$PROJECT_DIR$/src/main/res/anim/fab.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/drawable/fab_background.xml" afterPath="$PROJECT_DIR$/src/main/res/drawable/fab_background.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/drawable/grey.xml" afterPath="$PROJECT_DIR$/src/main/res/drawable/grey.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/drawable/selectable_card.xml" afterPath="$PROJECT_DIR$/src/main/res/drawable/selectable_card.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout-sw600dp/get_details_dialog.xml" afterPath="$PROJECT_DIR$/src/main/res/layout-sw600dp/get_details_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout-sw600dp/list_search.xml" afterPath="$PROJECT_DIR$/src/main/res/layout-sw600dp/list_search.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout-sw600dp/main_login.xml" afterPath="$PROJECT_DIR$/src/main/res/layout-sw600dp/main_login.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/changelog.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/changelog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/custom.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/custom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/get_details_dialog.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/get_details_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/info_dialog.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/info_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/list_item.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/list_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/list_search.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/list_search.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/main_login.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/main_login.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/rateapp.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/rateapp.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/timers.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/timers.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-sw320dp/dimens.xml" afterPath="$PROJECT_DIR$/src/main/res/values-sw320dp/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-sw600dp/dimens.xml" afterPath="$PROJECT_DIR$/src/main/res/values-sw600dp/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-sw720dp-land/dimens.xml" afterPath="$PROJECT_DIR$/src/main/res/values-sw720dp-land/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-v21/styles.xml" afterPath="$PROJECT_DIR$/src/main/res/values-v21/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/src/main/res/values/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/src/main/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vlog.iml" afterPath="$PROJECT_DIR$/vlog.iml" />
+    </list>
+    <ignored path="vlog.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/assets/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/classes/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/dependency-cache/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/dex/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/incremental/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/manifests/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/ndk/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/pre-dexed/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/res/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/rs/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/symbols/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/tmp/" />
+    <ignored path="$PROJECT_DIR$/build/outputs/" />
+    <ignored path="$PROJECT_DIR$/build/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="vlog" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="gradle-wrapper.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="proguard-rules.pro" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proguard-rules.pro">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/local.properties" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="AndroidView" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vlog" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vlog" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="FullScreen" value="true" />
+    <property name="android.project.structure.last.selected" value="SDK Location" />
+    <property name="android.project.structure.proportion" value="0.15" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="SearchEverywhereHistoryKey" value="&quot;AppData\Local\Android\sdk&quot;&#9;null&#9;null" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7242f614-8a54-4e97-9bdb-e83aeb69961f" name="Default" comment="" />
+      <created>1519710148329</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1519710148329</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287841" sideWeight="0.47997138" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287841" sideWeight="0.5200286" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.49713877" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/proguard-rules.pro">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

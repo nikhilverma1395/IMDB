@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="subsampling-scale-image-view-3.10.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/e5f464884ddf7fa35d9c7e33f83be04b4a1a8855/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/e5f464884ddf7fa35d9c7e33f83be04b4a1a8855/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.davemorrissey.labs/subsampling-scale-image-view/3.10.0/f8b6fcce92537289e633d523c0e75cc5501ae6f5/subsampling-scale-image-view-3.10.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

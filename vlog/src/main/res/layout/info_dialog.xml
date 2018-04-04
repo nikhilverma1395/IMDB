@@ -1,90 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:scrollbars="none"
-    android:layout_gravity="center"
-    android:background="#b6000000"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_gravity="center"
+    android:background="@color/windowBack"
+    android:scrollbars="none">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
         android:layout_width="@dimen/dialog_size"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
+            android:id="@+id/head_info"
             android:layout_width="match_parent"
-            android:textSize="25dp"
-            android:padding="15dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:layout_marginBottom="20dp"
-            android:textColor="#ff595fff"
-            android:text=" How To Use The App : " />
+            android:padding="15dp"
+            android:text=" How To Use The App : "
+            android:textColor="#4348d9"
+            android:textSize="25dp" />
 
 
         <TextView
+            android:id="@+id/data_info_1"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:gravity="left|center_vertical"
+            android:lineSpacingExtra="1dp"
             android:padding="5dp"
-            android:textStyle="bold"
-            android:textSize="@dimen/info_text_size"
-            android:textColor="#ffffff"
             android:text="@string/i1"
-            android:layout_margin="10dp"
-            android:lineSpacingExtra="1dp"
-            android:layout_height="match_parent" />
+            android:textColor="#ffffff"
+            android:textSize="@dimen/info_text_size"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/data_info_2"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:gravity="left|center_vertical"
+            android:lineSpacingExtra="1dp"
             android:padding="5dp"
-            android:textStyle="bold"
-            android:textSize="@dimen/info_text_size"
-            android:textColor="#ffffff"
             android:text="@string/i2"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:lineSpacingExtra="1dp"
-            android:layout_height="match_parent" />
+            android:textColor="#ffffff"
+            android:textSize="@dimen/info_text_size"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/data_info_3"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
             android:gravity="left|center_vertical"
-            android:padding="5dp"
-            android:textStyle="bold"
             android:lineSpacingExtra="1dp"
-            android:textSize="@dimen/info_text_size"
-            android:textColor="#ffffff"
+            android:padding="5dp"
             android:text="@string/i3"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_height="match_parent" />
+            android:textColor="#ffffff"
+            android:textSize="@dimen/info_text_size"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/data_info_4"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:gravity="left|center_vertical"
             android:padding="5dp"
-            android:textSize="@dimen/info_text_size"
-            android:textStyle="italic"
-            android:textColor="#ffffff"
             android:text="@string/i4"
-            android:layout_margin="10dp"
-            android:layout_height="match_parent" />
+            android:textColor="#ffffff"
+            android:textSize="@dimen/info_text_size"
+            android:textStyle="italic" />
 
 
-        <com.gc.materialdesign.views.ButtonRectangle
-            android:layout_width="200dp"
-            android:text=" Cancel "
-            android:layout_gravity="center"
-            android:textSize="20sp"
-            android:layout_margin="10dp"
+        <Button
             android:id="@+id/Dialog_b2"
+            android:layout_width="170dp"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
             android:background="#c60000"
-            android:layout_height="55dp" />
+            android:elevation="4dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:text=" Cancel "
+            android:textSize="15sp" />
     </LinearLayout>
 </ScrollView>

@@ -1,79 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="#b6000000"
-    android:layout_gravity="center"
-    android:gravity="center"
-    android:padding="10dp"
-    android:layout_margin="10dp"
     android:layout_width="220dp"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:background="@color/windowBack"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
 
     <TextView
-        android:layout_marginTop="10dp"
-        android:text="Rate Volsbb Login  !"
-        android:textColor="#F44336"
         style="@style/TextAppearance.AppCompat.Subhead"
-        android:gravity="center"
-        android:textSize="22sp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+       android:id="@+id/rate_app_head"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Rate Volsbb Login  !"
+        android:textColor="@color/accent"
+        android:textSize="22sp" />
 
     <TextView
-        android:layout_margin="10dp"
         android:id="@+id/rate_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
         android:text=""
         android:textColor="#E0E0E0"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="18sp" />
 
 
     <LinearLayout
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginBottom="15dp"
-        android:weightSum="3"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
         android:orientation="vertical"
-        android:layout_height="wrap_content">
+        android:weightSum="3">
 
         <Button
-            android:layout_width="match_parent"
-            android:text=" RATE IT NOW "
-            android:background="@android:color/transparent"
             android:id="@+id/rateit"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:textColor="#F44336"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_margin="11dp"
             android:layout_weight="1"
-            android:layout_height="0dp" />
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text=" RATE IT NOW "
+            android:textColor="@color/accent"
+            android:textSize="18sp" />
 
         <Button
-            android:background="@android:color/transparent"
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:layout_margin="11dp"
-            android:textSize="18sp"
-            android:textColor="@color/dim_foreground_disabled_material_dark"
             android:id="@+id/no_thanks"
-            android:text=" No Thanks "
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="11dp"
             android:layout_weight="1"
-            android:layout_height="0dp" />
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text=" No Thanks "
+            android:textColor="@color/accent"
+            android:textSize="18sp" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_margin="11dp"
-            android:textSize="18sp"
-            android:gravity="center"
-            android:background="@android:color/transparent"
-            android:text=" Remind Me Later "
             android:id="@+id/remind_later"
-            android:textColor="@color/dim_foreground_disabled_material_dark"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="11dp"
             android:layout_weight="1"
-            android:layout_height="0dp" />
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text=" Remind Me Later "
+            android:textColor="@color/accent"
+            android:textSize="18sp" />
 
 
     </LinearLayout>

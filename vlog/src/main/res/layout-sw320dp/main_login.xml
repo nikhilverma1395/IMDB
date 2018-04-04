@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gc.materialdesign.views.ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <FrameLayout
+        android:id="@+id/contaner_er"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/mainw"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/mbottom"
+                android:layout_marginLeft="@dimen/margin_top_image"
+                android:layout_marginTop="@dimen/margin_top_image"
+                android:elevation="20dp"
+                android:src="@drawable/mainw" />
+
+            <com.gc.materialdesign.views.ProgressBarCircularIndeterminate
+                android:id="@+id/progressDeterminate"
+                android:layout_width="@dimen/pro"
+                android:layout_height="@dimen/pro"
+
+                android:layout_above="@+id/login_b"
+                android:layout_centerHorizontal="true"
+                android:elevation="50dp" />
+
+            <TextView
+                android:id="@+id/logged_in_as"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wifi_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="You are Logged In As "
+                android:textSize="@dimen/my_txt_size"
+                android:visibility="gone" />
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/login_b"
+                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@id/logged_in_as"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="15dp"
+                android:elevation="5dp"
+                android:padding="10dp"
+                android:text="Log In" />
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/logout_b"
+                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@id/login_b"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:elevation="5dp"
+                android:padding="10dp"
+                android:text="Log Out" />
+
+            <LinearLayout
+                android:id="@+id/usagebut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logout_b"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/appStartLoginCtv"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Auto-Login on App-Start"
+                    android:textColor="#fff"
+                    android:textSize="13sp" />
+
+                <com.gc.materialdesign.views.CheckBox
+                    android:id="@+id/appStartLoginCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="-12dp"
+                    android:layout_marginRight="5dp" />
+
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/getusage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="Show Usage "
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/usage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="15dp"
+                    android:text="-"
+                    android:textSize="16sp"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/wifi_not_connected"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:textSize="12sp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="@dimen/padding_image_button"
+                android:background="#ff58d26e"
+                android:elevation="10dp"
+                android:text="Turn On Wifi and Connect"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+    </FrameLayout>
+</com.gc.materialdesign.views.ScrollView>

@@ -1,24 +1,25 @@
 package com.nikhilvermavit.vlog.Dialog;
 
-import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.gc.materialdesign.views.ButtonRectangle;
+import com.nikhilvermavit.vlog.Config;
 import com.nikhilvermavit.vlog.Fragment.ListAccounts;
 import com.nikhilvermavit.vlog.R;
 import com.nikhilvermavit.vlog.Sql.DataSource;
 import com.nikhilvermavit.vlog.SqlModel;
+import com.nikhilvermavit.vlog.TabActivity;
 
 import java.util.List;
 
@@ -29,10 +30,26 @@ import java.util.List;
 public class GetDetails extends DialogFragment implements View.OnClickListener, TextWatcher {
 
     private EditText uname, pass, pass_re, wifi_network_name;
-    private ButtonRectangle dismiss_reg;
-    private TextView pass_no_match;
+    private Button dismiss_reg;
+    private TextView pass_no_match, studVit;
+    EditText datepickop;
+    private String day = "-1";
+    TextView enter_cred_head;
 
     public GetDetails() {
+    }
+
+    public void setTypeFaceforAll() {
+        Typeface typeface = TabActivity.getRaleway(Config.RALEWAY_REG);
+        uname.setTypeface(typeface);
+        pass.setTypeface(typeface);
+        pass_re.setTypeface(typeface);
+        wifi_network_name.setTypeface(typeface);
+        dismiss_reg.setTypeface(typeface);
+        pass_no_match.setTypeface(typeface);
+        datepickop.setTypeface(typeface);
+        enter_cred_head.setTypeface(TabActivity.getRaleway(Config.RALEWAY_BOLD));
+        studVit.setTypeface(TabActivity.getRaleway(Config.RALEWAY_LIGHT));
     }
 
     public static GetDetails newInstance(String title) {
@@ -54,19 +71,14 @@ public class GetDetails extends DialogFragment implements View.OnClickListener, 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup v = (ViewGroup) inflater.inflate(R.layout.get_details_dialog, container, false);
         init(v);
+        setTypeFaceforAll();
         dismiss_reg.setEnabled(false);
         pass_no_match.setVisibility(View.GONE);
         getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         getDialog().setCancelable(false);
         uname.requestFocus();
-        String username = uname.getText().toString();
-        uname.setText(getActivity().getSharedPreferences("VOLSBB_LOGIN", Context.MODE_PRIVATE).getString("username_volsbb", ""));
-        pass.setText(getActivity().getSharedPreferences("VOLSBB_LOGIN", Context.MODE_PRIVATE).getString("password_volsbb", ""));
-        pass_re.setText(getActivity().getSharedPreferences("VOLSBB_LOGIN", Context.MODE_PRIVATE).getString("password_volsbb", ""));
-        String pass1 = pass.getText().toString();
-        String pass2 = pass_re.getText().toString();
         String tr = wifi_network_name.getText().toString();
-        wifi_network_name.setText(getActivity().getSharedPreferences("prefs.Volsbb", Context.MODE_PRIVATE).getString("networkName", tr));
+        wifi_network_name.setText(TabActivity.sharedPrefs.getValue(Config.networkNamePREF, tr));
         pass.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -95,8 +107,6 @@ public class GetDetails extends DialogFragment implements View.OnClickListener, 
             dismiss_reg.setEnabled(false);
         } else
             dismiss_reg.setEnabled(true);
-
-        Log.d("boooyyy", username + "\t" + pass.getText().toString() + "/t" + pass_re.getText().toString());
         String one = pass.getText().toString();
         String one1 = pass_re.getText().toString();
         if (one.equals("") || one1.equals("") || uname.getText().toString().equals(""))
@@ -109,8 +119,38 @@ public class GetDetails extends DialogFragment implements View.OnClickListener, 
         uname = (EditText) v.findViewById(R.id.uname_req);
         pass = (EditText) v.findViewById(R.id.pass_reg);
         pass_re = (EditText) v.findViewById(R.id.pass_confirm_reg);
-        dismiss_reg = (ButtonRectangle) v.findViewById(R.id.dismiss_reg);
+        dismiss_reg = (Button) v.findViewById(R.id.dismiss_reg);
         pass_no_match = (TextView) v.findViewById(R.id.pass_no_match);
+        studVit = (TextView) v.findViewById(R.id.studVit);
+        datepickop = (EditText) v.findViewById(R.id.datepicketop);
+        enter_cred_head = (TextView) v.findViewById(R.id.enter_cred_head);
+        datepickop.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                try {
+                    if (s.toString().trim().equals("") || s.length() != 0)
+                        if (Integer.parseInt(s.toString().trim()) >= 31) {
+                            datepickop.setError("Invalid Date");
+                        } else {
+                            dismiss_reg.setEnabled(true);
+                        }
+                } catch (NumberFormatException e) {
+                    datepickop.setError("Enter Date");
+                    dismiss_reg.setEnabled(false);
+                }
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
         wifi_network_name = (EditText) v.findViewById(R.id.wifi_network_name);
         dismiss_reg.setOnClickListener(this);
     }
@@ -119,26 +159,25 @@ public class GetDetails extends DialogFragment implements View.OnClickListener, 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.dismiss_reg) {
-            Toast.makeText(getActivity(), "Credentials Saved ", Toast.LENGTH_LONG).show();
+            day = datepickop.getText().toString().trim();
+            if (day.equals("") || day.length() == 0)
+                day = "01";
+            Toast.makeText(getActivity(), "Credentials Saved ", Toast.LENGTH_SHORT).show();
             String unamea = uname.getText().toString();
             String passa = pass_re.getText().toString();
 
-            getActivity().getSharedPreferences("VOLSBB_LOGIN", Context.MODE_PRIVATE).edit().putString("username_volsbb", uname.getText().toString()).commit();
-            getActivity().getSharedPreferences("VOLSBB_LOGIN", Context.MODE_PRIVATE).edit().putString("password_volsbb", pass_re.getText().toString()).commit();
-            getActivity().getSharedPreferences("prefs.Volsbb", Context.MODE_PRIVATE).edit().putString("networkName", wifi_network_name.getText().toString().trim()).commit();
+            TabActivity.sharedPrefs.storeIntValue(Config.dateReneWPREF, Integer.parseInt(day));
+            TabActivity.sharedPrefs.storeValue(Config.unamePREF, uname.getText().toString());
+            TabActivity.sharedPrefs.storeValue(Config.passPREF, pass_re.getText().toString());
+            TabActivity.sharedPrefs.storeValue(Config.networkNamePREF, wifi_network_name.getText().toString().trim());
             DataSource dataSource = new DataSource(getActivity());
             List<SqlModel> list = dataSource.getAllCredentials();
-            try {
-                Log.d("ls", list.size() + "");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
             if (list == null) {
-                dataSource.create(new SqlModel(uname.getText().toString(), pass_re.getText().toString()));
+                dataSource.create(new SqlModel(uname.getText().toString(), pass_re.getText().toString(), day + ""));
                 try {
-                    new ListAccounts().addFirst(new SqlModel(uname.getText().toString(), pass_re.getText().toString()));
+                    new ListAccounts().addFirst(new SqlModel(uname.getText().toString(), pass_re.getText().toString(), day + ""));
 
-                    ListAccounts.listView.setVisibility(View.VISIBLE);
+                    ListAccounts.recyclerView.setVisibility(View.VISIBLE);
                     ListAccounts.error.setVisibility(View.GONE);
 
                 } catch (Exception e) {
@@ -147,12 +186,12 @@ public class GetDetails extends DialogFragment implements View.OnClickListener, 
             } else {
                 if (checkdup(list, unamea, passa)) {
                     try {
-                        dataSource.create(new SqlModel(uname.getText().toString(), pass_re.getText().toString()));
+                        dataSource.create(new SqlModel(uname.getText().toString(), pass_re.getText().toString(), day + ""));
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                     try {
-                        ListAccounts.myAdapterr.add(new SqlModel(uname.getText().toString(), pass_re.getText().toString()));
+                        ListAccounts.adapter.add(new SqlModel(uname.getText().toString(), pass_re.getText().toString(), day + ""));
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

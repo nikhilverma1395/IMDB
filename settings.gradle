@@ -1,2 +1,2 @@
-include ':app', ':material_edit_text', ':materialDesign', ':act', ':Subsampling_IV',':vlog', ':myapplication', ':decode'
+include ':app', ':vlog'
 

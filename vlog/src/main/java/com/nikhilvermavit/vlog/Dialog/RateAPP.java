@@ -1,12 +1,10 @@
 package com.nikhilvermavit.vlog.Dialog;
 
 import android.content.ActivityNotFoundException;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,13 +13,15 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.nikhilvermavit.vlog.Config;
 import com.nikhilvermavit.vlog.R;
+import com.nikhilvermavit.vlog.TabActivity;
 
 /**
  * Created by Nikhil Verma on 07-01-2015.
  */
 public class RateAPP extends DialogFragment implements View.OnClickListener {
-    private TextView body_rate;
+    private TextView body_rate, rateapphead;
     private Button nothanks, later, rate;
 
     public RateAPP() {
@@ -31,7 +31,7 @@ public class RateAPP extends DialogFragment implements View.OnClickListener {
     public static RateAPP newInstance(String title) {
         RateAPP ra = new RateAPP();
         Bundle bun = new Bundle();
-        bun.putString("data.RATE", title);
+        bun.putString(Config.ratePREF, title);
         ra.setArguments(bun);
         return ra;
     }
@@ -53,14 +53,19 @@ public class RateAPP extends DialogFragment implements View.OnClickListener {
 
     private void init(ViewGroup view) {
         body_rate = (TextView) view.findViewById(R.id.rate_body);
+        rateapphead = (TextView) view.findViewById(R.id.rate_app_head);
         nothanks = (Button) view.findViewById(R.id.no_thanks);
         later = (Button) view.findViewById(R.id.remind_later);
         rate = (Button) view.findViewById(R.id.rateit);
         nothanks.setOnClickListener(this);
         later.setOnClickListener(this);
         rate.setOnClickListener(this);
-
-        String retr = "If You Enjoy Using Pronto Login, please take a moment to rate it. Thanks for Your support! ";
+        body_rate.setTypeface(TabActivity.getRaleway(Config.RALEWAY_REG));
+        rateapphead.setTypeface(TabActivity.getRaleway(Config.RALEWAY_BOLD));
+        nothanks.setTypeface(TabActivity.getRaleway(Config.RALEWAY_REG));
+        later.setTypeface(TabActivity.getRaleway(Config.RALEWAY_REG));
+        rate.setTypeface(TabActivity.getRaleway(Config.RALEWAY_REG));
+        String retr = "If You Enjoy Using Volsbb Login, please take a moment to rate it. Thanks for Your support!";
         body_rate.setText(retr);
     }
 
@@ -77,9 +82,8 @@ public class RateAPP extends DialogFragment implements View.OnClickListener {
 
             case R.id.rateit:
                 getDialog().dismiss();
-                int pr = getActivity().getSharedPreferences("PREFERENCE.IMDB.RATE", Context.MODE_PRIVATE).getInt("disable", -1);
-                Log.d("in rate", pr + "");
-                getActivity().getSharedPreferences("PREFERENCE.IMDB.RATE", Context.MODE_PRIVATE).edit().putInt("disable", pr + 1).commit();
+                int pr = TabActivity.sharedPrefs.getIntValue(Config.disable_ratePREF, -1);
+                TabActivity.sharedPrefs.storeIntValue(Config.disable_ratePREF, pr + 1);
                 launchMarket();
                 break;
 
@@ -87,9 +91,9 @@ public class RateAPP extends DialogFragment implements View.OnClickListener {
     }
 
     private void prefs() {
-        getActivity().getSharedPreferences("PREFERENCE.IMDB.RATE", getActivity().MODE_PRIVATE)
+        getActivity().getSharedPreferences(Config.prefNAME, getActivity().MODE_PRIVATE)
                 .edit()
-                .putBoolean("remindlater", true)
+                .putBoolean(Config.remindLaterPREF, true)
                 .commit();
     }
 

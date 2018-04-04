@@ -1,79 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@drawable/selectable_card"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    card_view:cardBackgroundColor="@android:color/white"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardElevation="5dp"
+    card_view:cardUseCompatPadding="true">
 
-    <LinearLayout
-        android:elevation="10dp"
-        android:orientation="vertical"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="8dp"
-        android:background="@drawable/card_background">
+        android:layout_height="@dimen/list_width"
+        android:background="?attr/selectableItemBackground"
+        android:padding="7dp">
 
-        <RelativeLayout
-            android:descendantFocusability="blocksDescendants"
-            android:layout_height="@dimen/list_width"
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="@dimen/circle_image_width"
+            android:layout_height="@dimen/circle_image_width"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/user" />
+
+        <TextView
+            android:id="@+id/uname_search"
             android:layout_width="match_parent"
-            xmlns:android="http://schemas.android.com/apk/res/android">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/iv"
+            android:text="Username"
+            android:textColor="@color/background_material_dark"
+            android:textSize="20sp" />
 
-            <com.nikhilvermavit.vlog.view.CircleImageView
-                android:background="#BDBDBD"
-                android:layout_width="@dimen/list_width"
-                android:id="@+id/iv"
-                android:src="@drawable/ic_account_box_black_48dp"
-                android:layout_height="@dimen/list_width" />
+        <TextView
+            android:id="@+id/pass_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/uname_search"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/iv"
+            android:text="Password"
+            android:textColor="@color/button_material_dark"
+            android:textSize="20sp" />
 
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_width="match_parent"
-                android:id="@+id/uname_search"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
-                android:text="Username"
-                style="@style/Base.TextAppearance.AppCompat.Title"
-                android:layout_toRightOf="@id/iv"
-                android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/imageButton_delete"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="4dp"
+            android:background="@android:color/transparent"
+            android:focusable="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/trash" />
 
-            <TextView
-                android:id="@+id/pass_search"
-                android:layout_marginBottom="10dp"
-                android:text="Password"
-                android:layout_marginLeft="10dp"
-                style="@style/Base.TextAppearance.AppCompat.Title"
-                android:layout_toRightOf="@id/iv"
-                android:layout_below="@id/uname_search"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/imageButton_select"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="13dp"
+            android:background="@android:color/transparent"
+            android:focusable="false"
+            android:scaleType="centerCrop"
+            android:src="@drawable/green"
+            android:visibility="visible" />
 
-            <ImageButton
-                android:layout_width="50dp"
-                android:layout_margin="4dp"
-                android:focusable="false"
-                android:background="@android:color/transparent"
-                android:src="@drawable/ic_delete_grey600_24dp"
-                android:layout_height="50dp"
-                android:id="@+id/imageButton_delete"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true" />
-
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_margin="4dp"
-                android:focusable="false"
-                android:visibility="gone"
-                android:scaleType="centerCrop"
-                android:background="@android:color/transparent"
-                android:src="@drawable/tick"
-                android:layout_height="40dp"
-                android:id="@+id/imageButton_select"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true" />
-
-        </RelativeLayout>
-
-
-    </LinearLayout>
-
-</FrameLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
